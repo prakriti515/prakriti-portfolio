@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#F8FAFC"/>
+  <circle cx="320" cy="180" r="80" fill="#2563EB" opacity="0.08" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="220" cy="140" r="40" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="2"/>
+  <circle cx="420" cy="140" r="40" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="2"/>
+  <circle cx="180" cy="240" r="35" fill="#2563EB" opacity="0.12" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="460" cy="240" r="35" fill="#2563EB" opacity="0.12" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="320" cy="280" r="30" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="250" y1="160" x2="290" y2="175" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="390" y1="160" x2="350" y2="175" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="210" y1="210" x2="275" y2="230" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="430" y1="210" x2="365" y2="230" stroke="#64748B" stroke-width="1.5"/>
+  <text x="40" y="340" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#0F172A">Kubernetes GitOps</text>
+  <text x="40" y="370" font-family="system-ui, sans-serif" font-size="14" fill="#64748B">ArgoCD · Helm · Docker</text>
+</svg>

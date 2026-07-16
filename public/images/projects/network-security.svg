@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#F8FAFC"/>
+  <path d="M320 80 L320 80 C380 80 420 120 420 180 C420 240 380 280 320 280 L320 320" stroke="#2563EB" stroke-width="3" fill="none"/>
+  <path d="M320 80 C260 80 220 120 220 180 C220 240 260 280 320 280" stroke="#06B6D4" stroke-width="3" fill="none"/>
+  <rect x="180" y="140" width="60" height="40" rx="4" fill="#2563EB" opacity="0.15" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="400" y="140" width="60" height="40" rx="4" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="280" y="200" width="80" height="50" rx="4" fill="#2563EB" opacity="0.2" stroke="#2563EB" stroke-width="1.5"/>
+  <path d="M300 100 L340 100 L320 130 Z" fill="#2563EB" opacity="0.3"/>
+  <text x="40" y="360" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#0F172A">Zero-Trust Network</text>
+  <text x="40" y="385" font-family="system-ui, sans-serif" font-size="14" fill="#64748B">AWS WAF · VPC · IAM</text>
+</svg>

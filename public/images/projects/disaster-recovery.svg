@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#F8FAFC"/>
+  <rect x="120" y="100" width="180" height="120" rx="8" fill="#2563EB" opacity="0.1" stroke="#2563EB" stroke-width="2"/>
+  <rect x="340" y="100" width="180" height="120" rx="8" fill="#06B6D4" opacity="0.1" stroke="#06B6D4" stroke-width="2"/>
+  <path d="M300 160 L340 160" stroke="#64748B" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M210 220 L210 260 L430 260 L430 220" stroke="#64748B" stroke-width="2" fill="none"/>
+  <rect x="240" y="260" width="160" height="60" rx="8" fill="#2563EB" opacity="0.15" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="210" cy="160" r="8" fill="#22C55E"/>
+  <circle cx="430" cy="160" r="8" fill="#22C55E"/>
+  <text x="40" y="360" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#0F172A">Disaster Recovery</text>
+  <text x="40" y="385" font-family="system-ui, sans-serif" font-size="14" fill="#64748B">AWS · Terraform · Python</text>
+</svg>

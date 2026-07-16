@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#F8FAFC"/>
+  <rect x="80" y="120" width="120" height="60" rx="8" fill="#2563EB" opacity="0.15" stroke="#2563EB" stroke-width="2"/>
+  <rect x="260" y="120" width="120" height="60" rx="8" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="2"/>
+  <rect x="440" y="120" width="120" height="60" rx="8" fill="#2563EB" opacity="0.15" stroke="#2563EB" stroke-width="2"/>
+  <path d="M200 150 L260 150" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M380 150 L440 150" stroke="#64748B" stroke-width="2"/>
+  <line x1="140" y1="180" x2="140" y2="240" stroke="#64748B" stroke-width="2"/>
+  <line x1="320" y1="180" x2="320" y2="240" stroke="#64748B" stroke-width="2"/>
+  <line x1="500" y1="180" x2="500" y2="240" stroke="#64748B" stroke-width="2"/>
+  <rect x="60" y="240" width="160" height="50" rx="8" fill="#2563EB" opacity="0.1" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="240" y="240" width="160" height="50" rx="8" fill="#06B6D4" opacity="0.1" stroke="#06B6D4" stroke-width="1.5"/>
+  <rect x="420" y="240" width="160" height="50" rx="8" fill="#2563EB" opacity="0.1" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="40" y="340" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#0F172A">CI/CD Platform</text>
+  <text x="40" y="370" font-family="system-ui, sans-serif" font-size="14" fill="#64748B">Jenkins · Docker · SonarQube</text>
+</svg>
