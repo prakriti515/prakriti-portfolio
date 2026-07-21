@@ -17,30 +17,21 @@ export function AboutSection() {
               {siteConfig.about.intro}
             </p>
             <div className="mt-8 grid grid-cols-2 gap-6">
-              <div className="rounded-xl border border-border bg-white p-5">
-                <p className="text-3xl font-bold text-primary">5+</p>
-                <p className="mt-1 text-sm text-text-secondary">
-                  Years Experience
-                </p>
-              </div>
-              <div className="rounded-xl border border-border bg-white p-5">
-                <p className="text-3xl font-bold text-secondary">99.9%</p>
-                <p className="mt-1 text-sm text-text-secondary">
-                  Uptime Target
-                </p>
-              </div>
-              <div className="rounded-xl border border-border bg-white p-5">
-                <p className="text-3xl font-bold text-primary">50+</p>
-                <p className="mt-1 text-sm text-text-secondary">
-                  Projects Delivered
-                </p>
-              </div>
-              <div className="rounded-xl border border-border bg-white p-5">
-                <p className="text-3xl font-bold text-secondary">10+</p>
-                <p className="mt-1 text-sm text-text-secondary">
-                  Certifications
-                </p>
-              </div>
+              {siteConfig.about.stats.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className="rounded-xl border border-border bg-white p-5"
+                >
+                  <p
+                    className={`text-3xl font-bold ${index % 2 === 0 ? "text-primary" : "text-secondary"}`}
+                  >
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-sm text-text-secondary">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 

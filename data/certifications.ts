@@ -1,3 +1,11 @@
+/**
+ * Certifications
+ *
+ * Add only credentials you hold. Remove template entries you do not have.
+ * verifyUrl should link to the issuer's public verification page for your credential.
+ * logo: add SVG/PNG under public/images/certifications/
+ */
+
 export type Certification = {
   id: string;
   name: string;
@@ -10,48 +18,12 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
-    id: "aws-saa",
-    name: "AWS Solutions Architect – Associate",
-    issuer: "Amazon Web Services",
-    date: "2025",
-    credentialId: "AWS-SAA-XXXXX",
-    verifyUrl: "https://aws.amazon.com/verification",
+    id: "replace-cert-slug",
+    name: "REPLACE: Certification Name",
+    issuer: "REPLACE: Issuing Organization",
+    date: "REPLACE: Year or Mon YYYY",
+    credentialId: "REPLACE: Credential ID",
+    verifyUrl: "REPLACE: Issuer verification URL",
     logo: "/images/certifications/aws.svg",
-  },
-  {
-    id: "azure-admin",
-    name: "Azure Administrator Associate",
-    issuer: "Microsoft",
-    date: "2025",
-    credentialId: "AZ-104-XXXXX",
-    verifyUrl: "https://learn.microsoft.com/credentials",
-    logo: "/images/certifications/azure.svg",
-  },
-  {
-    id: "cka",
-    name: "Certified Kubernetes Administrator",
-    issuer: "Cloud Native Computing Foundation",
-    date: "2024",
-    credentialId: "CKA-XXXXX",
-    verifyUrl: "https://training.linuxfoundation.org/certification",
-    logo: "/images/certifications/kubernetes.svg",
-  },
-  {
-    id: "terraform-associate",
-    name: "HashiCorp Certified: Terraform Associate",
-    issuer: "HashiCorp",
-    date: "2024",
-    credentialId: "TF-XXXXX",
-    verifyUrl: "https://www.hashicorp.com/certification",
-    logo: "/images/certifications/terraform.svg",
-  },
-  {
-    id: "linux-lpic",
-    name: "LPIC-1 Linux Administrator",
-    issuer: "Linux Professional Institute",
-    date: "2023",
-    credentialId: "LPIC1-XXXXX",
-    verifyUrl: "https://www.lpi.org/verify",
-    logo: "/images/certifications/linux.svg",
   },
 ];

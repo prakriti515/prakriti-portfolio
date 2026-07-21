@@ -1,3 +1,15 @@
+/**
+ * Projects
+ *
+ * Add one entry per project. Set featured: true for homepage display (3 recommended).
+ *
+ * Description structure (keep under ~280 characters):
+ *   [Problem/context] → [What you built/automated] → [Stack] → [Outcome if measurable]
+ *
+ * Replace image paths under public/images/projects/.
+ * Remove entries you do not want published. Delete this comment block when done.
+ */
+
 export type Project = {
   id: string;
   title: string;
@@ -11,66 +23,66 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "multi-cloud-iac",
-    title: "Multi-Cloud IaC Platform",
+    id: "replace-project-slug-1",
+    title: "REPLACE: Project Title",
     description:
-      "Terraform-based infrastructure provisioning across AWS and Azure with modular, reusable modules, remote state management, and automated drift detection.",
+      "REPLACE: Context, infrastructure or automation scope, primary technologies, and outcome. Example: Standardized VPC and compute provisioning with Terraform modules and CI validation, reducing manual setup and deployment variance.",
     image: "/images/projects/iac-platform.svg",
-    technologies: ["Terraform", "AWS", "Azure", "GitHub Actions"],
-    githubUrl: "https://github.com/prakritisharma/multi-cloud-iac",
-    caseStudyUrl: "/projects/multi-cloud-iac",
+    technologies: ["REPLACE", "Tech", "Stack"],
+    githubUrl: "REPLACE_GITHUB_REPO_URL",
+    caseStudyUrl: "/projects/replace-project-slug-1",
     featured: true,
   },
   {
-    id: "k8s-gitops",
-    title: "Kubernetes GitOps Pipeline",
+    id: "replace-project-slug-2",
+    title: "REPLACE: Project Title",
     description:
-      "End-to-end GitOps deployment pipeline using ArgoCD, Helm charts, and progressive delivery strategies for zero-downtime production releases.",
+      "REPLACE: Context, infrastructure or automation scope, primary technologies, and outcome.",
     image: "/images/projects/k8s-gitops.svg",
-    technologies: ["Kubernetes", "ArgoCD", "Helm", "Docker"],
-    githubUrl: "https://github.com/prakritisharma/k8s-gitops",
-    caseStudyUrl: "/projects/k8s-gitops",
+    technologies: ["REPLACE", "Tech", "Stack"],
+    githubUrl: "REPLACE_GITHUB_REPO_URL",
+    caseStudyUrl: "/projects/replace-project-slug-2",
     featured: true,
   },
   {
-    id: "observability-stack",
-    title: "Production Observability Stack",
+    id: "replace-project-slug-3",
+    title: "REPLACE: Project Title",
     description:
-      "Centralized monitoring solution with Prometheus, Grafana, and Loki providing real-time metrics, logs, and alerting for distributed microservices.",
+      "REPLACE: Context, infrastructure or automation scope, primary technologies, and outcome.",
     image: "/images/projects/observability.svg",
-    technologies: ["Prometheus", "Grafana", "Loki", "Alertmanager"],
-    githubUrl: "https://github.com/prakritisharma/observability-stack",
-    caseStudyUrl: "/projects/observability-stack",
+    technologies: ["REPLACE", "Tech", "Stack"],
+    githubUrl: "REPLACE_GITHUB_REPO_URL",
+    caseStudyUrl: "/projects/replace-project-slug-3",
     featured: true,
   },
   {
-    id: "cicd-platform",
-    title: "Self-Hosted CI/CD Platform",
+    id: "replace-project-slug-4",
+    title: "REPLACE: Project Title",
     description:
-      "Scalable Jenkins-based CI/CD platform with dynamic agents, pipeline-as-code, and integrated security scanning for containerized workloads.",
+      "REPLACE: Context, infrastructure or automation scope, primary technologies, and outcome.",
     image: "/images/projects/cicd-platform.svg",
-    technologies: ["Jenkins", "Docker", "SonarQube", "Nexus"],
-    githubUrl: "https://github.com/prakritisharma/cicd-platform",
-    caseStudyUrl: "/projects/cicd-platform",
+    technologies: ["REPLACE", "Tech", "Stack"],
+    githubUrl: "REPLACE_GITHUB_REPO_URL",
+    caseStudyUrl: "/projects/replace-project-slug-4",
   },
   {
-    id: "disaster-recovery",
-    title: "Disaster Recovery Automation",
+    id: "replace-project-slug-5",
+    title: "REPLACE: Project Title",
     description:
-      "Automated backup and disaster recovery framework with cross-region replication, RTO/RPO monitoring, and scheduled failover testing.",
+      "REPLACE: Context, infrastructure or automation scope, primary technologies, and outcome.",
     image: "/images/projects/disaster-recovery.svg",
-    technologies: ["AWS", "Terraform", "Python", "CloudWatch"],
-    githubUrl: "https://github.com/prakritisharma/disaster-recovery",
-    caseStudyUrl: "/projects/disaster-recovery",
+    technologies: ["REPLACE", "Tech", "Stack"],
+    githubUrl: "REPLACE_GITHUB_REPO_URL",
+    caseStudyUrl: "/projects/replace-project-slug-5",
   },
   {
-    id: "network-security",
-    title: "Zero-Trust Network Architecture",
+    id: "replace-project-slug-6",
+    title: "REPLACE: Project Title",
     description:
-      "Implementation of zero-trust networking with micro-segmentation, WAF rules, and automated security group management across hybrid cloud.",
+      "REPLACE: Context, infrastructure or automation scope, primary technologies, and outcome.",
     image: "/images/projects/network-security.svg",
-    technologies: ["AWS WAF", "Terraform", "VPC", "IAM"],
-    githubUrl: "https://github.com/prakritisharma/zero-trust-network",
-    caseStudyUrl: "/projects/zero-trust-network",
+    technologies: ["REPLACE", "Tech", "Stack"],
+    githubUrl: "REPLACE_GITHUB_REPO_URL",
+    caseStudyUrl: "/projects/replace-project-slug-6",
   },
 ];

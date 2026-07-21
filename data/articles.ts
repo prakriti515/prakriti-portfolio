@@ -1,3 +1,13 @@
+/**
+ * Blog articles (homepage preview)
+ *
+ * Add entries only for articles you have written or will publish.
+ * Remove unused slots. Slug must match the future route: /blog/[slug]
+ *
+ * Excerpt structure:
+ *   What the reader learns + primary systems or practices covered.
+ */
+
 export type Article = {
   id: string;
   title: string;
@@ -11,36 +21,36 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    id: "aws-cost-optimization",
-    title: "AWS Cost Optimization Strategies That Actually Work",
+    id: "replace-article-slug-1",
+    title: "REPLACE: Article Title",
     excerpt:
-      "Practical techniques for reducing cloud spend without sacrificing performance — reserved instances, rightsizing, and automated cleanup policies.",
-    date: "Jul 2026",
-    readTime: "6 min read",
-    category: "Cloud",
-    slug: "aws-cost-optimization",
-    tags: ["AWS", "FinOps", "Cost Management"],
+      "REPLACE: Summary of the problem, approach, and systems discussed. State what a reader will take away — not generic advice.",
+    date: "REPLACE: Mon YYYY",
+    readTime: "REPLACE: N min read",
+    category: "REPLACE: Category", // e.g. Cloud | CI/CD | SRE | Security
+    slug: "replace-article-slug-1",
+    tags: ["REPLACE", "Tags"],
   },
   {
-    id: "docker-best-practices",
-    title: "Docker Best Practices for Production Workloads",
+    id: "replace-article-slug-2",
+    title: "REPLACE: Article Title",
     excerpt:
-      "Security, performance, and maintainability patterns for building production-ready container images that deploy reliably every time.",
-    date: "Jun 2026",
-    readTime: "8 min read",
-    category: "Containers",
-    slug: "docker-best-practices",
-    tags: ["Docker", "Containers", "DevOps"],
+      "REPLACE: Summary of the problem, approach, and systems discussed.",
+    date: "REPLACE: Mon YYYY",
+    readTime: "REPLACE: N min read",
+    category: "REPLACE: Category",
+    slug: "replace-article-slug-2",
+    tags: ["REPLACE", "Tags"],
   },
   {
-    id: "cicd-pipeline-design",
-    title: "Designing CI/CD Pipelines for Microservices",
+    id: "replace-article-slug-3",
+    title: "REPLACE: Article Title",
     excerpt:
-      "Architecture patterns for building scalable CI/CD pipelines that handle independent deployments, feature flags, and rollback strategies.",
-    date: "May 2026",
-    readTime: "9 min read",
-    category: "CI/CD",
-    slug: "cicd-pipeline-design",
-    tags: ["CI/CD", "Microservices", "GitOps"],
+      "REPLACE: Summary of the problem, approach, and systems discussed.",
+    date: "REPLACE: Mon YYYY",
+    readTime: "REPLACE: N min read",
+    category: "REPLACE: Category",
+    slug: "replace-article-slug-3",
+    tags: ["REPLACE", "Tags"],
   },
 ];

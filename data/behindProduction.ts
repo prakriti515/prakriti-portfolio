@@ -1,3 +1,13 @@
+/**
+ * Behind Production — LinkedIn engineering series
+ *
+ * Add posts you have published on LinkedIn (or plan to publish).
+ * linkedinUrl must point to the specific post, not your profile.
+ *
+ * Remove this file's template entry until you have real posts to list.
+ * If empty, the homepage section will render no cards — add entries when ready.
+ */
+
 export type BehindProductionPost = {
   id: string;
   title: string;
@@ -11,47 +21,14 @@ export type BehindProductionPost = {
 
 export const behindProductionPosts: BehindProductionPost[] = [
   {
-    id: "incident-response",
-    title: "How We Reduced MTTR by 60% with Structured Incident Response",
+    id: "replace-post-slug",
+    title: "REPLACE: Post Title",
     excerpt:
-      "A deep dive into building runbooks, on-call rotations, and post-mortem culture that transformed our production incident handling.",
+      "REPLACE: What happened in production, what you changed, and what others can apply. Avoid unverifiable metrics.",
     series: "Behind Production",
-    date: "Jun 2026",
-    readTime: "8 min read",
-    linkedinUrl: "https://linkedin.com/in/prakritisharma",
-    tags: ["Incident Response", "SRE", "On-Call"],
-  },
-  {
-    id: "terraform-at-scale",
-    title: "Managing Terraform at Scale: Lessons from 500+ Resources",
-    excerpt:
-      "Practical strategies for module design, state management, and team workflows when your infrastructure codebase grows beyond a single team.",
-    series: "Behind Production",
-    date: "May 2026",
-    readTime: "10 min read",
-    linkedinUrl: "https://linkedin.com/in/prakritisharma",
-    tags: ["Terraform", "IaC", "DevOps"],
-  },
-  {
-    id: "k8s-production",
-    title: "Running Kubernetes in Production: What Nobody Tells You",
-    excerpt:
-      "Real-world challenges of operating Kubernetes clusters — from resource limits and networking quirks to upgrade strategies and cost optimization.",
-    series: "Behind Production",
-    date: "Apr 2026",
-    readTime: "12 min read",
-    linkedinUrl: "https://linkedin.com/in/prakritisharma",
-    tags: ["Kubernetes", "Production", "Cloud Native"],
-  },
-  {
-    id: "security-hardening",
-    title: "Security Hardening Linux Servers: A Practical Checklist",
-    excerpt:
-      "Step-by-step guide to securing production Linux servers with CIS benchmarks, automated auditing, and continuous compliance monitoring.",
-    series: "Behind Production",
-    date: "Mar 2026",
-    readTime: "7 min read",
-    linkedinUrl: "https://linkedin.com/in/prakritisharma",
-    tags: ["Security", "Linux", "Compliance"],
+    date: "REPLACE: Mon YYYY",
+    readTime: "REPLACE: N min read",
+    linkedinUrl: "REPLACE: LinkedIn post URL",
+    tags: ["REPLACE", "Tags"],
   },
 ];
