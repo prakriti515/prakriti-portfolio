@@ -3,14 +3,23 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { GithubIcon, ExternalLinkIcon } from "@/components/ui/icons";
 import type { Project } from "@/data/projects";
+import { getProjectUrl, isValidGithubUrl } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 
 type ProjectCardProps = {
   project: Project;
   className?: string;
+  showArchitecturePreview?: boolean;
 };
 
-export function ProjectCard({ project, className }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  className,
+  showArchitecturePreview = true,
+}: ProjectCardProps) {
+  const caseStudyUrl = getProjectUrl(project.id);
+  const showGithub = isValidGithubUrl(project.githubUrl);
+
   return (
     <article
       className={cn(
@@ -28,9 +37,26 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         />
       </div>
 
+      {showArchitecturePreview && (
+        <div className="border-y border-border bg-card px-4 py-3">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-text-secondary">
+            Architecture preview
+          </p>
+          <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-border bg-white">
+            <Image
+              src={project.architecturePreview}
+              alt={`Architecture preview for ${project.title}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          </div>
+        </div>
+      )}
+
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-lg font-semibold text-text-primary transition-colors group-hover:text-primary">
-          {project.title}
+          <Link href={caseStudyUrl}>{project.title}</Link>
         </h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-text-secondary">
           {project.description}
@@ -42,23 +68,25 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           ))}
         </div>
 
-        <div className="mt-6 flex items-center gap-4 border-t border-border pt-5">
+        <div className="mt-6 flex flex-wrap items-center gap-4 border-t border-border pt-5">
           <Link
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-primary"
+            href={caseStudyUrl}
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
           >
-            <GithubIcon />
-            GitHub
-          </Link>
-          <Link
-            href={project.caseStudyUrl}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-primary"
-          >
-            Case Study
+            View Case Study
             <ExternalLinkIcon />
           </Link>
+          {showGithub && (
+            <Link
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-primary"
+            >
+              <GithubIcon />
+              GitHub
+            </Link>
+          )}
         </div>
       </div>
     </article>

@@ -21,14 +21,14 @@ export type BehindProductionPost = {
 
 export const behindProductionPosts: BehindProductionPost[] = [
   {
-    id: "replace-post-slug",
-    title: "REPLACE: Post Title",
+    id: "-post-slug",
+    title: "Prakriti Shrestha",
     excerpt:
-      "REPLACE: What happened in production, what you changed, and what others can apply. Avoid unverifiable metrics.",
+      ": What happened in production, what you changed, and what others can apply. Avoid unverifiable metrics.",
     series: "Behind Production",
-    date: "REPLACE: Mon YYYY",
-    readTime: "REPLACE: N min read",
-    linkedinUrl: "REPLACE: LinkedIn post URL",
-    tags: ["REPLACE", "Tags"],
+    date: ": Mon YYYY",
+    readTime: ": N min read",
+    linkedinUrl: "https://www.linkedin.com/in/prakriti-shrestha-7b6101241/",
+    tags: ["", "Tags"],
   },
 ];

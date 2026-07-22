@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import type { Article } from "@/data/articles";
+import { getArticleUrl, getReadingTimeLabel } from "@/lib/articles";
 import { cn } from "@/lib/utils";
 
 type ArticleCardProps = {
@@ -10,6 +11,8 @@ type ArticleCardProps = {
 };
 
 export function ArticleCard({ article, className }: ArticleCardProps) {
+  const readTime = getReadingTimeLabel(article);
+
   return (
     <article
       className={cn(
@@ -17,15 +20,15 @@ export function ArticleCard({ article, className }: ArticleCardProps) {
         className,
       )}
     >
-      <div className="mb-4 flex items-center gap-3 text-sm text-text-secondary">
+      <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-text-secondary">
         <Badge variant="primary">{article.category}</Badge>
-        <span>{article.date}</span>
+        <time dateTime={article.date}>{article.date}</time>
         <span aria-hidden="true">·</span>
-        <span>{article.readTime}</span>
+        <span>{readTime}</span>
       </div>
 
       <h3 className="text-lg font-semibold text-text-primary transition-colors group-hover:text-primary">
-        <Link href={`/blog/${article.slug}`}>{article.title}</Link>
+        <Link href={getArticleUrl(article.slug)}>{article.title}</Link>
       </h3>
 
       <p className="mt-3 flex-1 text-sm leading-relaxed text-text-secondary">
@@ -39,7 +42,7 @@ export function ArticleCard({ article, className }: ArticleCardProps) {
       </div>
 
       <Link
-        href={`/blog/${article.slug}`}
+        href={getArticleUrl(article.slug)}
         className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
       >
         Read Article

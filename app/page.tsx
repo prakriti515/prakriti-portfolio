@@ -1,5 +1,4 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { PageShell } from "@/components/layout/PageShell";
 import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ExpertiseSection } from "@/components/home/ExpertiseSection";
@@ -11,19 +10,15 @@ import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ExpertiseSection />
-        <ProjectsSection />
-        <BehindProductionSection />
-        <ArticlesSection />
-        <CertificationsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
+    <PageShell>
+      <HeroSection />
+      <AboutSection />
+      <ExpertiseSection />
+      <ProjectsSection />
+      <BehindProductionSection />
+      <ArticlesSection />
+      <CertificationsSection />
+      <ContactSection />
+    </PageShell>
   );
 }

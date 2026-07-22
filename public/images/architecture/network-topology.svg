@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="380" y="40" width="200" height="60" rx="8" fill="#2563EB" fill-opacity="0.1" stroke="#2563EB"/>
+  <text x="480" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#2563EB">Internet / DNS</text>
+  <path d="M480 100 L480 140" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="320" y="140" width="320" height="70" rx="8" fill="#06B6D4" fill-opacity="0.1" stroke="#06B6D4"/>
+  <text x="480" y="182" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#06B6D4">Load Balancer</text>
+  <path d="M480 210 L480 250" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="80" y="250" width="360" height="200" rx="8" fill="#2563EB" fill-opacity="0.05" stroke="#2563EB" stroke-dasharray="6 4"/>
+  <text x="260" y="280" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#2563EB">Public Subnet</text>
+  <rect x="520" y="250" width="360" height="200" rx="8" fill="#64748B" fill-opacity="0.05" stroke="#64748B" stroke-dasharray="6 4"/>
+  <text x="700" y="280" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#64748B">Private Subnet</text>
+  <text x="480" y="500" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#64748B">Network Topology</text>
+</svg>

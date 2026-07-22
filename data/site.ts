@@ -7,10 +7,10 @@
  */
 
 export const siteConfig = {
-  name: "REPLACE_FULL_NAME",
+  name: "Prakriti Shrestha",
   title: "Cloud & DevOps Engineer", // e.g. Platform Engineer | SRE | DevSecOps Engineer
-  email: "REPLACE_EMAIL",
-  location: "REPLACE_CITY, REPLACE_COUNTRY",
+  email: "prakritishrestha515@gmail.com",
+  location: "Koteshwor, Kathmandu",
   resumeUrl: "/resume.pdf", // add public/resume.pdf
   profileImage: "/images/profile.svg", // replace with /images/profile.jpg
   description:
@@ -50,8 +50,8 @@ export const siteConfig = {
     ],
   },
   social: {
-    github: "REPLACE_GITHUB_PROFILE_URL",
-    linkedin: "REPLACE_LINKEDIN_PROFILE_URL",
+    github: "https://github.com/prakriti515",
+    linkedin: "https://www.linkedin.com/in/prakriti-shrestha-7b6101241/",
     twitter: "REPLACE_TWITTER_OR_X_URL", // remove from Footer if unused
   },
 } as const;
@@ -59,6 +59,7 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
+  { label: "Architecture", href: "/architecture" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Certifications", href: "/certifications" },

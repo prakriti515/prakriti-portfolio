@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="380" y="40" width="200" height="56" rx="8" fill="#2563EB" fill-opacity="0.12" stroke="#2563EB"/>
+  <text x="480" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#2563EB">Users / Clients</text>
+  <path d="M480 96 L480 130" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="280" y="130" width="400" height="56" rx="8" fill="#06B6D4" fill-opacity="0.1" stroke="#06B6D4"/>
+  <text x="480" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#06B6D4">Edge · Network · Security</text>
+  <path d="M480 186 L480 220" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="200" y="220" width="560" height="80" rx="8" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB"/>
+  <text x="480" y="268" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#2563EB">Compute · Containers · CI/CD</text>
+  <path d="M480 300 L480 334" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="240" y="334" width="200" height="64" rx="8" fill="#64748B" fill-opacity="0.08" stroke="#64748B"/>
+  <rect x="480" y="334" width="200" height="64" rx="8" fill="#64748B" fill-opacity="0.08" stroke="#64748B"/>
+  <text x="340" y="372" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#64748B">Data</text>
+  <text x="580" y="372" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#64748B">Observability</text>
+  <path d="M480 398 L480 420" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="300" y="420" width="360" height="48" rx="8" fill="#2563EB" fill-opacity="0.06" stroke="#2563EB"/>
+  <text x="480" y="450" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#64748B">Backup · DR · Automation</text>
+  <text x="480" y="510" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#64748B">Infrastructure Overview</text>
+</svg>

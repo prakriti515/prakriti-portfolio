@@ -1,18 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navLinks, siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { MenuIcon, CloseIcon } from "@/components/ui/icons";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const isScrolled = !isHome || hasScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setHasScrolled(window.scrollY > 20);
     };
 
     handleScroll();
@@ -26,6 +30,20 @@ export function Navbar() {
       document.body.style.overflow = "";
     };
   }, [isMobileOpen]);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    if (href.startsWith("/#")) return false;
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
+  const linkClassName = (href: string) =>
+    cn(
+      "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+      isActive(href)
+        ? "bg-primary/10 text-primary"
+        : "text-text-secondary hover:bg-card hover:text-primary",
+    );
 
   return (
     <header
@@ -53,10 +71,7 @@ export function Navbar() {
         <ul className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-card hover:text-primary"
-              >
+              <Link href={link.href} className={linkClassName(link.href)}>
                 {link.label}
               </Link>
             </li>
@@ -81,7 +96,7 @@ export function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-text-secondary transition-colors hover:bg-card hover:text-primary"
+                  className={cn(linkClassName(link.href), "block py-2.5")}
                   onClick={() => setIsMobileOpen(false)}
                 >
                   {link.label}
