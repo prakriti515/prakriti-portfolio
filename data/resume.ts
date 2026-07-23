@@ -145,7 +145,7 @@ export const resumeData = {
       ],
       technologies: ["Teaching", "Curriculum Delivery"],
     },
-  ],
+  ] as ExperienceEntry[],
   technicalSkills: [
     {
       id: "skills-cloud",
@@ -187,10 +187,6 @@ export const resumeData = {
       institution: "University of Sunderland (in partnership with ISMT College)",
       location: "Kathmandu, Nepal",
       period: "2022 – 2025",
-      /**details: [
-        "Graduated with 2:1 Honours",
-        "Led an NCE-funded research project applying multi-agent reinforcement learning to IoT network load balancing",
-      ],*/
     },
     {
       id: "education-2",
@@ -198,9 +194,8 @@ export const resumeData = {
       institution: "ISMT College",
       location: "Kathmandu, Nepal",
       period: "2024",
-      details: ["Merit"],
     },
-  ],
+  ] as EducationEntry[],
   professionalInterests: [
     "Cloud infrastructure architecture and platform engineering",
     "Infrastructure automation and Infrastructure as Code",
