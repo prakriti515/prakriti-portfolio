@@ -9,6 +9,6 @@
   <rect x="640" y="160" width="200" height="120" rx="8" fill="#64748B" fill-opacity="0.08" stroke="#64748B"/>
   <text x="740" y="215" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#64748B">Off-site /</text>
   <text x="740" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#64748B">Archive</text>
-  <text x="480" y="380" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#64748B">Schedule · Retention · Validation</text>
+  <text x="480" y="380" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#64748B">Schedule ï¿½ Retention ï¿½ Validation</text>
   <text x="480" y="480" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#64748B">Backup Strategy</text>
 </svg>

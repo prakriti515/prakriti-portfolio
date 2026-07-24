@@ -9,6 +9,6 @@
   <rect x="520" y="120" width="160" height="80" rx="8" fill="#2563EB" fill-opacity="0.1" stroke="#2563EB"/>
   <text x="600" y="165" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#2563EB">Runtime</text>
   <rect x="200" y="280" width="560" height="160" rx="8" fill="#64748B" fill-opacity="0.06" stroke="#64748B"/>
-  <text x="480" y="340" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#64748B">Containers · Networks · Volumes</text>
+  <text x="480" y="340" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#64748B">Containers ï¿½ Networks ï¿½ Volumes</text>
   <text x="480" y="480" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#64748B">Docker Architecture</text>
 </svg>

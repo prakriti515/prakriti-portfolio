@@ -7,9 +7,9 @@ type BadgeProps = {
 };
 
 const variantStyles = {
-  default: "bg-card text-text-secondary border-border",
-  primary: "bg-primary/8 text-primary border-primary/15",
-  secondary: "bg-secondary/8 text-secondary border-secondary/15",
+  default: "bg-background text-text-secondary border-border",
+  primary: "bg-primary/10 text-primary border-primary/20",
+  secondary: "bg-secondary/10 text-secondary border-secondary/20",
 };
 
 export function Badge({

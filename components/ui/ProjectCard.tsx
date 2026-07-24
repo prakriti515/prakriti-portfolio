@@ -23,7 +23,7 @@ export function ProjectCard({
   return (
     <article
       className={cn(
-        "group flex flex-col overflow-hidden rounded-xl border border-border bg-white transition-all duration-300 hover:border-primary/25 hover:shadow-lg hover:shadow-primary/5",
+        "group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/25 hover:shadow-lg hover:shadow-primary/10",
         className,
       )}
     >
@@ -42,7 +42,7 @@ export function ProjectCard({
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-text-secondary">
             Architecture preview
           </p>
-          <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-border bg-white">
+          <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-border bg-background">
             <Image
               src={project.architecturePreview}
               alt={`Architecture preview for ${project.title}`}

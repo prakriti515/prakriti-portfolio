@@ -1,24 +1,18 @@
 import { PageShell } from "@/components/layout/PageShell";
 import { HeroSection } from "@/components/home/HeroSection";
-import { AboutSection } from "@/components/home/AboutSection";
-import { ExpertiseSection } from "@/components/home/ExpertiseSection";
+import { WhatIDoSection } from "@/components/home/WhatIDoSection";
 import { ProjectsSection } from "@/components/home/ProjectsSection";
-import { BehindProductionSection } from "@/components/home/BehindProductionSection";
-import { ArticlesSection } from "@/components/home/ArticlesSection";
-import { CertificationsSection } from "@/components/home/CertificationsSection";
-import { ContactSection } from "@/components/home/ContactSection";
+import { HomeCTASection } from "@/components/home/HomeCTASection";
+import { TechStackBar } from "@/components/home/TechStackBar";
 
 export default function Home() {
   return (
     <PageShell>
       <HeroSection />
-      <AboutSection />
-      <ExpertiseSection />
+      <WhatIDoSection />
       <ProjectsSection />
-      <BehindProductionSection />
-      <ArticlesSection />
-      <CertificationsSection />
-      <ContactSection />
+      <HomeCTASection />
+      <TechStackBar />
     </PageShell>
   );
 }

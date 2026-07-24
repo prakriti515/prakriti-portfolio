@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "gradient";
 type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonProps = {
@@ -15,12 +15,14 @@ type ButtonProps = {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-white hover:bg-primary/90 shadow-sm shadow-primary/20",
+    "bg-primary text-white hover:bg-primary/90 shadow-sm shadow-primary/25",
   secondary:
-    "bg-secondary text-white hover:bg-secondary/90 shadow-sm shadow-secondary/20",
+    "bg-secondary text-white hover:bg-secondary/90 shadow-sm shadow-secondary/25",
+  gradient:
+    "bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 shadow-lg shadow-primary/20",
   outline:
-    "border border-border bg-white text-text-primary hover:border-primary/40 hover:bg-card",
-  ghost: "text-text-secondary hover:text-primary hover:bg-card",
+    "border border-border bg-card/50 text-text-primary hover:border-primary/40 hover:bg-card backdrop-blur-sm",
+  ghost: "text-text-secondary hover:text-primary hover:bg-card/80",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -39,7 +41,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const styles = cn(
-    "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
     variantStyles[variant],
     sizeStyles[size],
     className,
