@@ -3,9 +3,9 @@
 :root {
   --color-primary: #6366f1;
   --color-secondary: #38bdf8;
-  --color-background: #0a0e1a;
-  --color-card: #121828;
-  --color-border: #1e293b;
+  --color-background: #060913;
+  --color-card: #0c1020;
+  --color-border: #1a2238;
   --color-text-primary: #f8fafc;
   --color-text-secondary: #94a3b8;
 }
@@ -13,9 +13,9 @@
 @theme inline {
   --color-primary: #6366f1;
   --color-secondary: #38bdf8;
-  --color-background: #0a0e1a;
-  --color-card: #121828;
-  --color-border: #1e293b;
+  --color-background: #060913;
+  --color-card: #0c1020;
+  --color-border: #1a2238;
   --color-text-primary: #f8fafc;
   --color-text-secondary: #94a3b8;
   --font-sans: var(--font-geist-sans);
@@ -24,12 +24,14 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #060913;
 }
 
 body {
-  background: var(--color-background);
+  background-color: var(--color-background);
   color: var(--color-text-primary);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 @keyframes float {
@@ -67,10 +69,10 @@ body {
 
 .hero-grid {
   background-image:
-    linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 50%, transparent 100%);
+    linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 60%, transparent 100%);
 }
 
 /* Resume page stays print-friendly on white paper even in a dark-themed site */

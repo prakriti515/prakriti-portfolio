@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" className="w-full h-full">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#0a1024"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141c38" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0c1228" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad2)"/>
+  
+  <!-- Grid lines -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <path d="M0 50h800M0 100h800M0 150h800M0 200h800M0 250h800M0 300h800M0 350h800M0 400h800M0 450h800"/>
+    <path d="M50 0v500M100 0v500M150 0v500M200 0v500M250 0v500M300 0v500M350 0v500M400 0v500M450 0v500M500 0v500M550 0v500M600 0v500M650 0v500M700 0v500M750 0v500"/>
+  </g>
+
+  <!-- Title / Label in corner -->
+  <rect x="30" y="24" width="140" height="26" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <circle cx="44" cy="37" r="4" fill="#38bdf8"/>
+  <text x="56" y="41" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">DOCKER COMPOSE / CI</text>
+
+  <!-- Connection Lines with Glow -->
+  <g stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="4 4">
+    <!-- Internet/Users to Nginx -->
+    <path d="M160 180 H 250" />
+    <!-- Nginx to Containers -->
+    <path d="M390 180 H 470" />
+    <!-- CI/CD to Swarm -->
+    <path d="M600 100 V 130 H 470" />
+    <!-- Containers to Database -->
+    <path d="M570 330 V 380 H 400" />
+  </g>
+
+  <!-- Left: Traffic / Cloudflare -->
+  <g transform="translate(50, 140)">
+    <rect width="130" height="80" rx="10" fill="url(#cardGrad2)" stroke="#f59e0b" stroke-width="1.2"/>
+    <circle cx="28" cy="40" r="12" fill="#f59e0b" fill-opacity="0.2"/>
+    <path d="M22 40h12m-6-6v12" stroke="#fbbf24" stroke-width="2"/>
+    <text x="48" y="36" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Cloudflare</text>
+    <text x="48" y="52" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10">WAF &amp; DNS</text>
+  </g>
+
+  <!-- Middle: Nginx Ingress -->
+  <g transform="translate(230, 130)">
+    <rect width="160" height="100" rx="10" fill="url(#cardGrad2)" stroke="#10b981" stroke-width="1.5" filter="url(#glow2)"/>
+    <rect width="160" height="100" rx="10" fill="url(#cardGrad2)" stroke="#10b981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Nginx Reverse Proxy</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Automated SSL / Certbot</text>
+    <rect x="20" y="62" width="120" height="24" rx="4" fill="#064e3b" stroke="#059669"/>
+    <text x="32" y="78" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Rate Limiting &amp; HSTS</text>
+  </g>
+
+  <!-- Right: Docker Cluster / 15+ Services -->
+  <g transform="translate(450, 130)">
+    <rect width="300" height="200" rx="12" fill="url(#cardGrad2)" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="16" y="14" width="268" height="26" rx="5" fill="#1e3a8a" stroke="#3b82f6"/>
+    <text x="28" y="32" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Docker App Network (Bridge / Isolated)</text>
+    
+    <g transform="translate(16, 52)">
+      <rect width="80" height="60" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="12" y="28" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">API Node</text>
+      <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9">NodeJS / Go</text>
+    </g>
+    <g transform="translate(104, 52)">
+      <rect width="80" height="60" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="12" y="28" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Auth Svc</text>
+      <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9">JWT / OAuth</text>
+    </g>
+    <g transform="translate(192, 52)">
+      <rect width="80" height="60" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="12" y="28" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Workers</text>
+      <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9">BullMQ / Celery</text>
+    </g>
+
+    <g transform="translate(16, 122)">
+      <rect width="124" height="60" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="12" y="28" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">PostgreSQL 16</text>
+      <text x="12" y="46" fill="#10b981" font-family="system-ui, sans-serif" font-size="9">Persistent Volume</text>
+    </g>
+    <g transform="translate(148, 122)">
+      <rect width="124" height="60" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="12" y="28" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Redis Cache</text>
+      <text x="12" y="46" fill="#10b981" font-family="system-ui, sans-serif" font-size="9">In-Memory Store</text>
+    </g>
+  </g>
+
+  <!-- CI/CD Top Right -->
+  <g transform="translate(540, 40)">
+    <rect width="210" height="50" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+    <text x="16" y="24" fill="#c7d2fe" font-family="system-ui, sans-serif" font-size="11" font-weight="700">GitHub Actions CI/CD</text>
+    <text x="16" y="40" fill="#818cf8" font-family="system-ui, sans-serif" font-size="10">Build • Test • Deploy via SSH</text>
+  </g>
+
+  <!-- Bottom: Health & Metrics -->
+  <g transform="translate(150, 390)">
+    <rect width="460" height="54" rx="10" fill="url(#cardGrad2)" stroke="#6366f1" stroke-width="1.2"/>
+    <text x="24" y="24" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Zero-Downtime Deployment &amp; Health Checks</text>
+    <text x="24" y="42" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Rolling Container Updates • Automatic Restart Policies • Isolated Docker Bridge Network</text>
+  </g>
+</svg>

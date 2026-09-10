@@ -22,7 +22,7 @@ export function ProjectsPageContent() {
       </div>
       <p className="mt-10 text-center text-sm text-text-secondary">
         {allProjects.length} project{allProjects.length === 1 ? "" : "s"} ·{" "}
-        <Link href="/#contact" className="font-medium text-primary hover:underline">
+        <Link href="/contact" className="font-medium text-primary hover:underline">
           Discuss your infrastructure needs
         </Link>
       </p>

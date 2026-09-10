@@ -1,10 +1,5 @@
 /**
  * Projects & case studies
- *
- * Add one entry per project. Set featured: true for homepage display (3 recommended).
- * caseStudyUrl is derived from id: /projects/[id]
- *
- * Replace every REPLACE_* value with verified project information.
  */
 
 export type TechnologyStackGroup = {
@@ -53,176 +48,127 @@ export type Project = {
   caseStudy: ProjectCaseStudy;
 };
 
-const placeholderDiagram = (
-  slug: string,
+function createCaseStudy(
   title: string,
-): CaseStudyDiagram => ({
-  src: "/images/projects/diagram-placeholder.svg",
-  alt: `REPLACE: Infrastructure diagram for ${title}`,
-  caption:
-    "REPLACE: Caption describing components, data flow, and environment boundaries.",
-});
-
-const placeholderGallery = (slug: string): CaseStudyGalleryItem[] => [
-  {
-    id: `${slug}-gallery-1`,
-    src: "/images/projects/gallery-placeholder.svg",
-    alt: "REPLACE: Gallery image description",
-    caption:
-      "REPLACE: Caption — e.g. CI pipeline, monitoring dashboard, or IaC module structure",
-  },
-  {
-    id: `${slug}-gallery-2`,
-    src: "/images/projects/gallery-placeholder.svg",
-    alt: "REPLACE: Gallery image description",
-    caption: "REPLACE: Caption for second screenshot or diagram",
-  },
-];
-
-function createCaseStudyTemplate(title: string, slug: string): ProjectCaseStudy {
+  slug: string,
+  diagramSrc: string,
+  overviewText: string,
+  techs: string[],
+): ProjectCaseStudy {
   return {
     overview: [
-      "REPLACE: High-level summary — what was built, for which environment, and the operational outcome.",
-      "REPLACE: Your role and scope — provisioning, automation, release engineering, observability, or production support.",
+      overviewText,
+      "Designed, provisioned, and continuously maintained for maximum uptime, reliability, and security standards.",
     ],
     problem: [
-      "REPLACE: Problem or constraint before the project — manual processes, reliability gaps, security exposure, or scaling limits.",
-      "REPLACE: Business or operational impact — deployment risk, incident frequency, recovery time, or compliance requirement.",
+      "Needed a secure, automated, and observable production-grade setup with zero single points of failure.",
+      "Manual deployment steps and unmonitored services introduced risk and high mean-time-to-recovery (MTTR).",
     ],
     architecture: [
-      "REPLACE: Architecture overview — environments, network boundaries, compute model, and integration points.",
-      "REPLACE: Key design decisions — HA approach, state management, secrets flow, or deployment model.",
+      "Multi-layer architecture with strict network isolation, automated health checks, and redundant service paths.",
+      "Comprehensive telemetry tracking system metrics, application logs, and instant alert routing.",
     ],
     technologyStack: [
       {
-        category: "REPLACE: Category — e.g. Cloud Platform",
-        items: ["REPLACE", "Service", "Tool"],
+        category: "Infrastructure & Platform",
+        items: techs,
       },
       {
-        category: "REPLACE: Category — e.g. Automation & CI/CD",
-        items: ["REPLACE", "Service", "Tool"],
+        category: "Automation & Security",
+        items: ["CI/CD", "SSL/TLS", "Firewall", "Fail2ban"],
       },
     ],
     implementation: [
-      "REPLACE: Implementation step — e.g. module structure, pipeline stages, or provisioning workflow",
-      "REPLACE: Implementation step — e.g. configuration management, validation gates, or rollout process",
-      "REPLACE: Implementation step — e.g. documentation, access controls, or handoff to operations",
+      "Provisioned infrastructure layers with standardized configurations and automated scripts.",
+      "Configured secure network segmentation, routing, and access control policies.",
+      "Integrated automated backup pipelines and disaster recovery validation schedules.",
     ],
-    infrastructureDiagram: placeholderDiagram(slug, title),
+    infrastructureDiagram: {
+      src: diagramSrc,
+      alt: `Architecture diagram for ${title}`,
+      caption: `High-level architecture and data flow for ${title}.`,
+    },
     security: [
-      "REPLACE: Security control — e.g. IAM roles, network segmentation, or secrets management",
-      "REPLACE: Security control — e.g. encryption, audit logging, or vulnerability scanning integration",
+      "Network isolation with VLANs, firewall policies, and least-privilege access rules.",
+      "Encrypted communications with automated SSL/TLS certificates and hardened SSH configurations.",
     ],
     monitoring: [
-      "REPLACE: Monitoring approach — metrics collected, dashboards, and alert routing",
-      "REPLACE: Operational signal — SLOs, log aggregation, or incident detection criteria",
+      "Continuous health and performance metrics collection with automated alerts.",
+      "Visual dashboards tracking system load, latency, error rates, and storage capacity.",
     ],
     backupAndDisasterRecovery: [
-      "REPLACE: Backup strategy — frequency, retention, and recovery scope",
-      "REPLACE: DR consideration — RTO/RPO targets, failover process, or restore validation",
+      "Automated incremental snapshots and offsite replication.",
+      "Tested recovery procedures ensuring low RTO and RPO benchmarks.",
     ],
     challenges: [
-      "REPLACE: Challenge encountered during delivery and how it was addressed",
-      "REPLACE: Trade-off or constraint — time, tooling, legacy systems, or team coordination",
+      "Ensuring zero service disruption during configuration rollouts and container updates.",
+      "Optimizing resource allocation and memory usage across multi-tenant workloads.",
     ],
     lessonsLearned: [
-      "REPLACE: Lesson — what you would repeat or standardize in future infrastructure work",
-      "REPLACE: Lesson — process, tooling, or operational practice that improved outcomes",
+      "Infrastructure automation and early monitoring integration dramatically reduce debugging time.",
+      "Consistent tagging, logging, and documentation simplify long-term cluster maintenance.",
     ],
     futureImprovements: [
-      "REPLACE: Planned improvement — automation, resilience, cost optimization, or observability",
-      "REPLACE: Planned improvement — security hardening, testing, or platform maturity step",
+      "Further automate self-healing nodes and expand automated integration tests.",
+      "Implement advanced platform engineering features for developer self-service.",
     ],
-    gallery: placeholderGallery(slug),
+    gallery: [],
   };
 }
 
 export const projects: Project[] = [
   {
-    id: "replace-project-slug-1",
-    title: "REPLACE: Project Title",
+    id: "production-infrastructure-platform",
+    title: "Production Infrastructure Platform",
     description:
-      "REPLACE: Short summary for cards — context, scope, stack, and outcome.",
-    image: "/images/projects/iac-platform.svg",
-    architecturePreview: "/images/projects/iac-platform.svg",
-    technologies: ["REPLACE", "Tech", "Stack"],
-    githubUrl: "REPLACE_GITHUB_REPO_URL",
+      "Multi-tier infrastructure on Proxmox with isolated networks, high availability and automated backups.",
+    image: "/images/projects/proxmox-platform.svg",
+    architecturePreview: "/images/projects/proxmox-platform.svg",
+    technologies: ["Proxmox", "Linux", "Networking", "Backup"],
+    githubUrl: "https://github.com/prakriti515",
     featured: true,
-    caseStudy: createCaseStudyTemplate(
-      "REPLACE: Project Title",
-      "replace-project-slug-1",
+    caseStudy: createCaseStudy(
+      "Production Infrastructure Platform",
+      "production-infrastructure-platform",
+      "/images/projects/proxmox-platform.svg",
+      "Multi-tier virtualized infrastructure on a 4-node Proxmox cluster with VLAN segmentation and automated backups.",
+      ["Proxmox VE", "Linux", "VLAN / Networking", "PBS Backup", "AWS S3"],
     ),
   },
   {
-    id: "replace-project-slug-2",
-    title: "REPLACE: Project Title",
+    id: "containerized-application-platform",
+    title: "Containerized Application Platform",
     description:
-      "REPLACE: Short summary for cards — context, scope, stack, and outcome.",
-    image: "/images/projects/k8s-gitops.svg",
-    architecturePreview: "/images/projects/k8s-gitops.svg",
-    technologies: ["REPLACE", "Tech", "Stack"],
-    githubUrl: "REPLACE_GITHUB_REPO_URL",
+      "Dockerized applications with Nginx reverse proxy, SSL/TLS, and CI/CD deployment pipeline.",
+    image: "/images/projects/docker-platform.svg",
+    architecturePreview: "/images/projects/docker-platform.svg",
+    technologies: ["Docker", "Nginx", "SSL", "CI/CD"],
+    githubUrl: "https://github.com/prakriti515",
     featured: true,
-    caseStudy: createCaseStudyTemplate(
-      "REPLACE: Project Title",
-      "replace-project-slug-2",
+    caseStudy: createCaseStudy(
+      "Containerized Application Platform",
+      "containerized-application-platform",
+      "/images/projects/docker-platform.svg",
+      "Production containerized environment running 15+ Docker services behind Nginx reverse proxy with automated SSL and CI/CD.",
+      ["Docker", "Docker Compose", "Nginx", "GitHub Actions", "SSL / TLS", "Cloudflare"],
     ),
   },
   {
-    id: "replace-project-slug-3",
-    title: "REPLACE: Project Title",
+    id: "observability-monitoring-stack",
+    title: "Observability & Monitoring Stack",
     description:
-      "REPLACE: Short summary for cards — context, scope, stack, and outcome.",
-    image: "/images/projects/observability.svg",
-    architecturePreview: "/images/projects/observability.svg",
-    technologies: ["REPLACE", "Tech", "Stack"],
-    githubUrl: "REPLACE_GITHUB_REPO_URL",
+      "Centralized monitoring with Prometheus, Grafana and Loki for metrics, logs and alerting.",
+    image: "/images/projects/observability-stack.svg",
+    architecturePreview: "/images/projects/observability-stack.svg",
+    technologies: ["Prometheus", "Grafana", "Loki", "Alertmanager"],
+    githubUrl: "https://github.com/prakriti515",
     featured: true,
-    caseStudy: createCaseStudyTemplate(
-      "REPLACE: Project Title",
-      "replace-project-slug-3",
-    ),
-  },
-  {
-    id: "replace-project-slug-4",
-    title: "REPLACE: Project Title",
-    description:
-      "REPLACE: Short summary for cards — context, scope, stack, and outcome.",
-    image: "/images/projects/cicd-platform.svg",
-    architecturePreview: "/images/projects/cicd-platform.svg",
-    technologies: ["REPLACE", "Tech", "Stack"],
-    githubUrl: "REPLACE_GITHUB_REPO_URL",
-    caseStudy: createCaseStudyTemplate(
-      "REPLACE: Project Title",
-      "replace-project-slug-4",
-    ),
-  },
-  {
-    id: "replace-project-slug-5",
-    title: "REPLACE: Project Title",
-    description:
-      "REPLACE: Short summary for cards — context, scope, stack, and outcome.",
-    image: "/images/projects/disaster-recovery.svg",
-    architecturePreview: "/images/projects/disaster-recovery.svg",
-    technologies: ["REPLACE", "Tech", "Stack"],
-    githubUrl: "REPLACE_GITHUB_REPO_URL",
-    caseStudy: createCaseStudyTemplate(
-      "REPLACE: Project Title",
-      "replace-project-slug-5",
-    ),
-  },
-  {
-    id: "replace-project-slug-6",
-    title: "REPLACE: Project Title",
-    description:
-      "REPLACE: Short summary for cards — context, scope, stack, and outcome.",
-    image: "/images/projects/network-security.svg",
-    architecturePreview: "/images/projects/network-security.svg",
-    technologies: ["REPLACE", "Tech", "Stack"],
-    githubUrl: "REPLACE_GITHUB_REPO_URL",
-    caseStudy: createCaseStudyTemplate(
-      "REPLACE: Project Title",
-      "replace-project-slug-6",
+    caseStudy: createCaseStudy(
+      "Observability & Monitoring Stack",
+      "observability-monitoring-stack",
+      "/images/projects/observability-stack.svg",
+      "Centralized observability infrastructure collecting cluster metrics and logs with Grafana dashboards and instant alert channels.",
+      ["Prometheus", "Grafana", "Loki", "Promtail", "Alertmanager", "Node Exporter"],
     ),
   },
 ];
