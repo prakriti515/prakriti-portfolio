@@ -30,9 +30,9 @@ export type TechnologyDecision = {
 export const architecturePageMeta = {
   title: "Architecture",
   description:
-    "How production infrastructure is designed topology, platforms, observability, security, and recovery patterns.",
+    "How production infrastructure is designed — topology, platforms, observability, security, and recovery patterns.",
   intro:
-    "REPLACE: Short overview of your engineering approach to designing and operating infrastructure environments supported, design principles, and operational priorities.",
+    "A production-grade infrastructure architecture built on a 4-node Proxmox virtualization cluster, featuring functional workload isolation, container orchestration, centralized observability, and automated recovery pipelines.",
 } as const;
 
 export const architectureSections: ArchitectureSection[] = [
@@ -40,18 +40,19 @@ export const architectureSections: ArchitectureSection[] = [
     id: "production-infrastructure",
     title: "Production Infrastructure",
     intro:
-      "REPLACE: Describe your production environment — cloud provider, compute model, environment separation, and provisioning approach.",
+      "A production environment built on a 4-node Proxmox virtualization cluster, with workloads separated by function to improve isolation, operational control, and maintainability. The environment is organized into dedicated virtual machines for gateway and container management, production applications, databases, and monitoring/security services.",
     points: [
-      "REPLACE: Environment layout e.g. dev/staging/prod separation, accounts, or VPCs",
-      "REPLACE: Compute and storage baseline instances, managed services, or Kubernetes",
-      "REPLACE: Provisioning model IaC tooling, change control, and deployment cadence",
-      "REPLACE: Operational ownership who runs changes, on-call, and release gates",
+      "VM200 (Gateway / Container Management): Docker and Docker Compose workloads, Portainer for container management, Nginx reverse proxy, traffic routing, TLS/SSL termination, and secure service exposure.",
+      "VM101 (Production Applications): Dedicated production application workloads and containerized services managed with Docker Compose and application-level configuration.",
+      "VM202 (Databases): Dedicated database workloads with strict separation of application and database resources, plus automated database backup and recovery processes.",
+      "VM203 (Monitoring & Security): Prometheus for infrastructure and service metrics, Grafana for visualization and dashboards, Loki for centralized log collection, and security services.",
+      "Operational Readiness: Clear resource boundaries between application, database, gateway, and observability workloads making troubleshooting, maintenance, security hardening, automated backups, and recovery readiness more manageable.",
     ],
     diagram: {
       src: "/images/architecture/production-infrastructure.svg",
-      alt: "Production infrastructure diagram placeholder",
+      alt: "4-node Proxmox production infrastructure cluster layout",
       caption:
-        "REPLACE: Caption — regions, environments, core services, and traffic entry points.",
+        "4-node Proxmox cluster topology separating Gateway (VM200), Applications (VM101), Databases (VM202), and Observability (VM203).",
     },
   },
   {
