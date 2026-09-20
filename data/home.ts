@@ -1,5 +1,5 @@
 /**
- * Homepage content — hero, services, stats, CTA, and tech stack bar.
+ * Homepage content - hero, services, stats, CTA, and tech stack bar.
  */
 
 export type HomeStat = {

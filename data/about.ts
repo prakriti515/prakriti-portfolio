@@ -59,7 +59,7 @@ export const aboutData = {
   },
   engineeringPhilosophy: {
     intro:
-      "I approach infrastructure work as a discipline built on repeatability, security, and visibility — every system I run should be observable, recoverable, and predictable.",
+      "I approach infrastructure work as a discipline built on repeatability, security, and visibility, every system I run should be observable, recoverable, and predictable.",
     principles: [
       {
         id: "reliability",
@@ -71,7 +71,7 @@ export const aboutData = {
         id: "automation",
         title: "Automate repeatable work",
         description:
-          "I reduce manual toil wherever it recurs — from CI/CD pipelines built with Jenkins and GitHub Actions to Ansible-based configuration management — so the same task never has to be done by hand twice.",
+          "I reduce manual toil wherever it recurs, from CI/CD pipelines built with Jenkins and GitHub Actions to Ansible-based configuration management - so the same task never has to be done by hand twice.",
       },
       {
         id: "security",
@@ -184,7 +184,7 @@ export const aboutData = {
   },
   coreTechnologies: {
     intro:
-      "I apply these technologies daily across hybrid infrastructure — from Proxmox-virtualized production servers to AWS-based backup and recovery workflows.",
+      "I apply these technologies daily across hybrid infrastructure - from Proxmox-virtualized production servers to AWS-based backup and recovery workflows.",
     categories: [
       {
         id: "cloud-platforms",
@@ -231,16 +231,16 @@ export const aboutData = {
         topic: "Platform Engineering & Internal Developer Platforms",
         status: "in-progress",
         focus:
-          "Studying how to design self-service infrastructure platforms — golden paths, internal tooling, and developer experience patterns that scale beyond single-team operations.",
+          "Studying how to design self-service infrastructure platforms - golden paths, internal tooling, and developer experience patterns that scale beyond single-team operations.",
       },
     ],
   },
   careerGoals: {
     intro:
-      "My path is toward becoming a technical leader in cloud infrastructure — combining hands-on operational depth with architecture-level thinking.",
+      "My path is toward becoming a technical leader in cloud infrastructure - combining hands-on operational depth with architecture-level thinking.",
     goals: [
       "Short-term: deepen Linux, AWS, and Azure operations while mastering automation and building a public technical portfolio.",
-      "Mid-term: grow into a Senior Cloud/Infrastructure Engineer role — leading system design initiatives and mentoring other engineers.",
+      "Mid-term: grow into a Senior Cloud/Infrastructure Engineer role - leading system design initiatives and mentoring other engineers.",
       "Long-term: become a Cloud Infrastructure Architect, driving scalable platform design and cloud migration strategy.",
     ],
   },

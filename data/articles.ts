@@ -1,5 +1,5 @@
 /**
- * Blog articles — structured content blocks (no MDX required).
+ * Blog articles - structured content blocks (no MDX required).
  *
  * Replace REPLACE_* fields before publishing.
  * Slug must match route: /blog/[slug]
@@ -70,7 +70,7 @@ function createArticleBody(slug: string): ArticleBlock[] {
     },
     {
       type: "paragraph",
-      text: "REPLACE: Environment, constraints, and baseline behavior before changes — stack, scale, and risk.",
+      text: "REPLACE: Environment, constraints, and baseline behavior before changes - stack, scale, and risk.",
     },
     {
       type: "callout",
@@ -86,7 +86,7 @@ function createArticleBody(slug: string): ArticleBlock[] {
     },
     {
       type: "paragraph",
-      text: "REPLACE: Design or implementation approach — tools, control plane, and validation steps.",
+      text: "REPLACE: Design or implementation approach - tools, control plane, and validation steps.",
     },
     {
       type: "list",
@@ -105,7 +105,7 @@ function createArticleBody(slug: string): ArticleBlock[] {
     },
     {
       type: "paragraph",
-      text: "REPLACE: Explain the snippet below — what it provisions, enforces, or automates.",
+      text: "REPLACE: Explain the snippet below - what it provisions, enforces, or automates.",
     },
     {
       type: "code",
@@ -145,7 +145,7 @@ resource "aws_s3_bucket" "example" {
     },
     {
       type: "paragraph",
-      text: "REPLACE: Closing takeaway — what to apply next and what to measure.",
+      text: "REPLACE: Closing takeaway - what to apply next and what to measure.",
     },
   ];
 }

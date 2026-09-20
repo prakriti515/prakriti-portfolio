@@ -39,7 +39,7 @@ export function BlogPageContent({
       <SectionHeading
         label="Engineering Notes"
         title="Blog"
-        description="Infrastructure, DevOps, and production operations — structured notes and walkthroughs."
+        description="Infrastructure, DevOps, and production operations - structured notes and walkthroughs."
         className="mb-10"
       />
 

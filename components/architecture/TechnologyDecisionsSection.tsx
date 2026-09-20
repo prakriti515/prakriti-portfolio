@@ -14,7 +14,7 @@ export function TechnologyDecisionsSection({
       <SectionHeading
         label="Decisions"
         title="Technology Decisions"
-        description="Documented choices — context, rationale, and accepted trade-offs."
+        description="Documented choices - context, rationale, and accepted trade-offs."
       />
       <div className="grid gap-5 lg:grid-cols-3">
         {decisions.map((item) => (

@@ -39,7 +39,7 @@ export const resumeData = {
   header: {
     headline: "Cloud & DevOps Engineer",
     tagline:
-      "Building secure, automated, and highly available production infrastructure — working toward Cloud Infrastructure Architecture and Platform Engineering.",
+      "Building secure, automated, and highly available production infrastructure - working toward Cloud Infrastructure Architecture and Platform Engineering.",
   },
   summary:
     "Cloud & DevOps Engineer with hands-on production experience designing and operating virtualized infrastructure, containerized workloads, and observability platforms across hybrid environments. Skilled in AWS and Azure fundamentals, Linux systems administration, Docker, CI/CD automation, and security hardening, with research experience applying multi-agent reinforcement learning to distributed systems problems. Focused on building reliable, scalable, and secure infrastructure, with a long-term goal of growing into cloud architecture and platform engineering leadership roles.",

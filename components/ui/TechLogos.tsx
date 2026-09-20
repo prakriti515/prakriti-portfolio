@@ -4,7 +4,7 @@ type LogoProps = {
   className?: string;
 };
 
-/* 1. AWS Logo — Transparent */
+/* 1. AWS Logo - Transparent */
 export function AwsLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 48 30" className={className} aria-hidden="true" fill="none">
@@ -30,7 +30,7 @@ export function AwsLogo({ className }: LogoProps) {
   );
 }
 
-/* 2. Linux (Tux) — Transparent */
+/* 2. Linux (Tux) - Transparent */
 export function LinuxLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden="true" fill="none">
@@ -48,7 +48,7 @@ export function LinuxLogo({ className }: LogoProps) {
   );
 }
 
-/* 3. Docker — Transparent */
+/* 3. Docker - Transparent */
 export function DockerLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 36 32" className={className} aria-hidden="true" fill="none">
@@ -68,7 +68,7 @@ export function DockerLogo({ className }: LogoProps) {
   );
 }
 
-/* 4. Kubernetes — Transparent */
+/* 4. Kubernetes - Transparent */
 export function KubernetesLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden="true" fill="none">
@@ -88,7 +88,7 @@ export function KubernetesLogo({ className }: LogoProps) {
   );
 }
 
-/* 5. Terraform — Transparent */
+/* 5. Terraform - Transparent */
 export function TerraformLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden="true" fill="none">
@@ -100,7 +100,7 @@ export function TerraformLogo({ className }: LogoProps) {
   );
 }
 
-/* 6. Ansible — Transparent */
+/* 6. Ansible - Transparent */
 export function AnsibleLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden="true" fill="none">
@@ -115,7 +115,7 @@ export function AnsibleLogo({ className }: LogoProps) {
   );
 }
 
-/* 7. Grafana — Transparent */
+/* 7. Grafana - Transparent */
 export function GrafanaLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 128 128" className={className} aria-hidden="true" fill="none">
@@ -133,7 +133,7 @@ export function GrafanaLogo({ className }: LogoProps) {
   );
 }
 
-/* 8. Prometheus — Transparent */
+/* 8. Prometheus - Transparent */
 export function PrometheusLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 128 128" className={className} aria-hidden="true" fill="none">
@@ -145,7 +145,7 @@ export function PrometheusLogo({ className }: LogoProps) {
   );
 }
 
-/* 9. Proxmox — Transparent */
+/* 9. Proxmox - Transparent */
 export function ProxmoxLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden="true" fill="none">
@@ -157,7 +157,7 @@ export function ProxmoxLogo({ className }: LogoProps) {
   );
 }
 
-/* 10. Azure — Transparent */
+/* 10. Azure - Transparent */
 export function AzureLogo({ className }: LogoProps) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden="true" fill="none">

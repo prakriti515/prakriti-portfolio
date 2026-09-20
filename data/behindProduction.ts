@@ -1,11 +1,11 @@
 /**
- * Behind Production — LinkedIn engineering series
+ * Behind Production - LinkedIn engineering series
  *
  * Add posts you have published on LinkedIn (or plan to publish).
  * linkedinUrl must point to the specific post, not your profile.
  *
  * Remove this file's template entry until you have real posts to list.
- * If empty, the homepage section will render no cards — add entries when ready.
+ * If empty, the homepage section will render no cards - add entries when ready.
  */
 
 export type BehindProductionPost = {

@@ -2,7 +2,7 @@
  * Site configuration
  *
  * Replace every REPLACE_* value before publishing.
- * Keep language factual — describe work you have done, systems you have operated,
+ * Keep language factual - describe work you have done, systems you have operated,
  * and outcomes you can substantiate in interviews.
  */
 
@@ -12,7 +12,7 @@ export const siteConfig = {
   email: "prakritishrestha515@gmail.com",
   location: "Koteshwor, Kathmandu",
   resumeUrl: "/resume.pdf", // add public/resume.pdf
-  profileImage: "/images/profilephoto.png", 
+  profileImage: "/images/profilephoto.png",
   description:
     "Cloud & DevOps Engineer building secure, automated, and highly available production infrastructure across AWS, Azure, and self-hosted platforms.",
   headline: {
@@ -40,11 +40,11 @@ export const siteConfig = {
         label: "Production Environments Supported",
       },
       {
-        value: "[REPLACE — confirm count, your nav references 6 total projects]",
+        value: "[REPLACE - confirm count, your nav references 6 total projects]",
         label: "Infrastructure / Automation Projects",
       },
       {
-        value: "[REPLACE — 24 total, or 6 if you show only the featured set]",
+        value: "[REPLACE - 24 total, or 6 if you show only the featured set]",
         label: "Professional Certifications",
       },
     ],
