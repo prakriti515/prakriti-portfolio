@@ -1,10 +1,3 @@
-/**
- * Architecture page content
- *
- * Replace REPLACE_* values with your real infrastructure design notes.
- * Do not claim systems or outcomes you have not operated.
- */
-
 export type ArchitectureDiagram = {
   src: string;
   alt: string;
