@@ -30,9 +30,9 @@ export type TechnologyDecision = {
 export const architecturePageMeta = {
   title: "Architecture",
   description:
-    "How production infrastructure is designed — topology, platforms, observability, security, and recovery patterns.",
+    "How production infrastructure is designed topology, platforms, observability, security, and recovery patterns.",
   intro:
-    "REPLACE: Short overview of your engineering approach to designing and operating infrastructure — environments supported, design principles, and operational priorities.",
+    "REPLACE: Short overview of your engineering approach to designing and operating infrastructure environments supported, design principles, and operational priorities.",
 } as const;
 
 export const architectureSections: ArchitectureSection[] = [
@@ -42,10 +42,10 @@ export const architectureSections: ArchitectureSection[] = [
     intro:
       "REPLACE: Describe your production environment — cloud provider, compute model, environment separation, and provisioning approach.",
     points: [
-      "REPLACE: Environment layout — e.g. dev/staging/prod separation, accounts, or VPCs",
-      "REPLACE: Compute and storage baseline — instances, managed services, or Kubernetes",
-      "REPLACE: Provisioning model — IaC tooling, change control, and deployment cadence",
-      "REPLACE: Operational ownership — who runs changes, on-call, and release gates",
+      "REPLACE: Environment layout e.g. dev/staging/prod separation, accounts, or VPCs",
+      "REPLACE: Compute and storage baseline instances, managed services, or Kubernetes",
+      "REPLACE: Provisioning model IaC tooling, change control, and deployment cadence",
+      "REPLACE: Operational ownership who runs changes, on-call, and release gates",
     ],
     diagram: {
       src: "/images/architecture/production-infrastructure.svg",
