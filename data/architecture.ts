@@ -30,7 +30,7 @@ export type TechnologyDecision = {
 export const architecturePageMeta = {
   title: "Architecture",
   description:
-    "How production infrastructure is designed — topology, platforms, observability, security, and recovery patterns.",
+    "How production infrastructure is designed - topology, platforms, observability, security, and recovery patterns.",
   intro:
     "A production-grade infrastructure architecture built on a 4-node Proxmox virtualization cluster, featuring functional workload isolation, container orchestration, centralized observability, and automated recovery pipelines.",
 } as const;
@@ -59,39 +59,36 @@ export const architectureSections: ArchitectureSection[] = [
     id: "network-topology",
     title: "Network Topology",
     intro:
-      "The production environment uses layered network and traffic controls to separate public-facing access from internal application, database, and monitoring services. Public traffic is filtered at the edge, routed securely through a central gateway, and passed only to required internal services while keeping databases and management workloads isolated from direct public access.",
+      "REPLACE: How traffic enters the environment and how subnets, routing, and connectivity are structured.",
     points: [
-      "Internet & Edge Layer: Public DNS and traffic management through Cloudflare, enforcing TLS/HTTPS encryption, WAF traffic filtering, rate limiting, and bot protection.",
-      "Gateway Layer: Nginx reverse proxy routes incoming requests to appropriate application services, handles HTTPS/TLS termination, and prevents direct exposure of internal workloads.",
-      "Application Layer: Production applications run inside isolated workloads communicating through controlled internal networking, with only designated endpoints exposed via the gateway.",
-      "Database Layer: Dedicated database workloads strictly separated from public-facing services, restricting application-to-database communication exclusively to authorized services.",
-      "Monitoring & Security Layer: Prometheus metric collectors, Loki log shippers, and Grafana dashboards connected via secure internal network channels to support production operations.",
+      "REPLACE: Edge and ingress — load balancers, DNS, CDN, or API gateway",
+      "REPLACE: Segmentation — public/private subnets, security groups, or NACLs",
+      "REPLACE: Internal connectivity — service-to-service, VPN, or peering",
+      "REPLACE: Egress controls — NAT, proxy, or restricted outbound paths",
     ],
     diagram: {
       src: "/images/architecture/network-topology.svg",
-      alt: "Layered network topology and traffic routing diagram",
+      alt: "Network topology diagram placeholder",
       caption:
-        "Traffic flow: Internet → Cloudflare (WAF/TLS) → Gateway / Nginx Reverse Proxy → Production Apps, Databases, and Observability.",
+        "REPLACE: Caption — VPC layout, subnets, and primary traffic flows.",
     },
   },
   {
     id: "docker-architecture",
     title: "Docker Architecture",
     intro:
-      "Production applications and supporting services are containerized using Docker and managed primarily through Docker Compose. This provides consistent service configuration, isolated application environments, and a repeatable operational workflow for deploying and maintaining production workloads.",
+      "REPLACE: Container runtime scope — local dev, CI builds, registry flow, and production orchestration if applicable.",
     points: [
-      "Docker & Isolation: Containerized application and supporting workloads ensuring consistent runtime environments, controlled dependencies, and fault isolation.",
-      "Docker Compose Orchestration: Multi-container stack definitions managing service configuration, networking, volumes, and dependency ordering for reliable deployments.",
-      "Nginx Ingress Routing: Central reverse proxy routing incoming traffic to appropriate container endpoints with TLS termination and access control.",
-      "Portainer Management: Web-based management interface providing real-time container visibility, log inspection, and operational control.",
-      "Container Networking & Storage: Isolated Docker bridge networks prevent direct external exposure, while stateful services use managed persistent volumes tied to backup routines.",
-      "Production Operational Discipline: Controlled change procedures with pre-deployment backups, dependency checks, and post-deployment telemetry validation.",
+      "REPLACE: Image build pipeline — base images, scanning, tagging, and registry",
+      "REPLACE: Runtime placement — single hosts, Swarm, ECS, or Kubernetes",
+      "REPLACE: Configuration — env vars, secrets injection, and resource limits",
+      "REPLACE: Networking and storage — bridge/overlay networks, volumes, and persistence",
     ],
     diagram: {
       src: "/images/architecture/docker-architecture.svg",
-      alt: "Docker multi-container deployment architecture diagram",
+      alt: "Docker architecture diagram placeholder",
       caption:
-        "Container workflow: Source / Build → Docker Image → Host Compose Stack (Apps, Nginx, Portainer) → Telemetry.",
+        "REPLACE: Caption — build → registry → deploy flow and runtime components.",
     },
   },
   {
