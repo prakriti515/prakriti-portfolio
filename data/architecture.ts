@@ -1,3 +1,7 @@
+/**
+ * Architecture page content
+ */
+
 export type ArchitectureDiagram = {
   src: string;
   alt: string;
@@ -23,7 +27,7 @@ export type TechnologyDecision = {
 export const architecturePageMeta = {
   title: "Architecture",
   description:
-    "How production infrastructure is designed - topology, platforms, observability, security, and recovery patterns.",
+    "How production infrastructure is designed — topology, platforms, observability, security, and recovery patterns.",
   intro:
     "A production-grade infrastructure architecture built on a 4-node Proxmox virtualization cluster, featuring functional workload isolation, container orchestration, centralized observability, and automated recovery pipelines.",
 } as const;
@@ -52,158 +56,167 @@ export const architectureSections: ArchitectureSection[] = [
     id: "network-topology",
     title: "Network Topology",
     intro:
-      "REPLACE: How traffic enters the environment and how subnets, routing, and connectivity are structured.",
+      "The production environment uses layered network and traffic controls to separate public-facing access from internal application, database, and monitoring services. Public traffic is filtered at the edge, routed securely through a central gateway, and passed only to required internal services while keeping databases and management workloads isolated from direct public access.",
     points: [
-      "REPLACE: Edge and ingress — load balancers, DNS, CDN, or API gateway",
-      "REPLACE: Segmentation — public/private subnets, security groups, or NACLs",
-      "REPLACE: Internal connectivity — service-to-service, VPN, or peering",
-      "REPLACE: Egress controls — NAT, proxy, or restricted outbound paths",
+      "Internet & Edge Layer: Public DNS and traffic management through Cloudflare, enforcing TLS/HTTPS encryption, WAF traffic filtering, rate limiting, and bot protection.",
+      "Gateway Layer: Nginx reverse proxy routes incoming requests to appropriate application services, handles HTTPS/TLS termination, and prevents direct exposure of internal workloads.",
+      "Application Layer: Production applications run inside isolated workloads communicating through controlled internal networking, with only designated endpoints exposed via the gateway.",
+      "Database Layer: Dedicated database workloads strictly separated from public-facing services, restricting application-to-database communication exclusively to authorized services.",
+      "Monitoring & Security Layer: Prometheus metric collectors, Loki log shippers, and Grafana dashboards connected via secure internal network channels to support production operations.",
     ],
     diagram: {
       src: "/images/architecture/network-topology.svg",
-      alt: "Network topology diagram placeholder",
+      alt: "Layered network topology and traffic routing diagram",
       caption:
-        "REPLACE: Caption — VPC layout, subnets, and primary traffic flows.",
+        "Traffic flow: Internet → Cloudflare (WAF/TLS) → Gateway / Nginx Reverse Proxy → Production Apps, Databases, and Observability.",
     },
   },
   {
     id: "docker-architecture",
     title: "Docker Architecture",
     intro:
-      "REPLACE: Container runtime scope — local dev, CI builds, registry flow, and production orchestration if applicable.",
+      "Production applications and supporting services are containerized using Docker and managed primarily through Docker Compose. This provides consistent service configuration, isolated application environments, and a repeatable operational workflow for deploying and operating multiple production workloads.",
     points: [
-      "REPLACE: Image build pipeline — base images, scanning, tagging, and registry",
-      "REPLACE: Runtime placement — single hosts, Swarm, ECS, or Kubernetes",
-      "REPLACE: Configuration — env vars, secrets injection, and resource limits",
-      "REPLACE: Networking and storage — bridge/overlay networks, volumes, and persistence",
+      "Docker & Isolation: Containerized application and supporting workloads ensuring consistent runtime environments, controlled dependencies, and fault isolation.",
+      "Docker Compose Orchestration: Multi-container stack definitions managing service configuration, networking, volumes, and dependency ordering for reliable deployments.",
+      "Nginx Ingress Routing: Central reverse proxy routing incoming traffic to appropriate container endpoints with TLS termination and access control.",
+      "Portainer Management: Web-based management interface providing real-time container visibility, log inspection, and operational control.",
+      "Container Networking & Storage: Isolated Docker bridge networks prevent direct external exposure, while stateful services use managed persistent volumes tied to backup routines.",
+      "Production Operational Discipline: Controlled change procedures with pre-deployment backups, dependency checks, and post-deployment telemetry validation.",
     ],
     diagram: {
       src: "/images/architecture/docker-architecture.svg",
-      alt: "Docker architecture diagram placeholder",
+      alt: "Docker multi-container deployment architecture diagram",
       caption:
-        "REPLACE: Caption — build → registry → deploy flow and runtime components.",
+        "Container workflow: Source / Build → Docker Image → Host Compose Stack (Apps, Nginx, Portainer) → Telemetry.",
     },
   },
   {
     id: "monitoring-stack",
-    title: "Monitoring Stack",
+    title: "Monitoring & Observability",
     intro:
-      "REPLACE: Observability approach — metrics, logs, traces, and how alerts reach operators.",
+      "The production environment uses a self-hosted observability stack to provide visibility into infrastructure health, service performance, resource utilization, and application logs.",
     points: [
-      "REPLACE: Metrics — what is collected, retention, and primary dashboards",
-      "REPLACE: Logging — aggregation, search, and correlation with incidents",
-      "REPLACE: Alerting — thresholds, routing, escalation, and noise control",
-      "REPLACE: SLOs or review practice — error budgets, post-incident review, or capacity checks",
+      "Prometheus Metrics: Collects and stores time-series telemetry across hosts, containers, and services to drive dashboards, threshold tracking, and alerting.",
+      "Grafana Dashboards: Centralized visual dashboards for real-time CPU, memory, disk, network, container health, and service availability tracking.",
+      "Loki Log Centralization: Aggregates searchable application and system logs, providing fast correlation between metric anomalies and underlying log events.",
+      "Key Monitored Areas: System resources (CPU, RAM, Disk I/O, Network), container lifecycle, application uptime, systemd logs, and infrastructure trends.",
+      "Operational Telemetry Workflow: Metrics identify 'what is happening' while logs contextualize 'why it happened', used daily for health audits, incident resolution, and post-deployment validation.",
     ],
     diagram: {
       src: "/images/architecture/monitoring-stack.svg",
-      alt: "Monitoring stack diagram placeholder",
+      alt: "Centralized Prometheus, Loki, and Grafana monitoring stack diagram",
       caption:
-        "REPLACE: Caption — agents, collectors, storage, and alert paths.",
+        "Observability flow: Production Hosts & Containers → Prometheus (Metrics) & Loki (Logs) → Grafana Dashboards & Alerting.",
     },
   },
   {
     id: "security-layers",
     title: "Security Layers",
     intro:
-      "REPLACE: Defense-in-depth controls across identity, network, data, and supply chain.",
+      "Security is implemented as multiple defensive layers across the edge, network, application, host, and access-management levels to reduce unnecessary exposure, control access, detect suspicious activity, and protect production workloads.",
     points: [
-      "REPLACE: Identity and access — IAM, RBAC, MFA, and least-privilege patterns",
-      "REPLACE: Network security — segmentation, WAF, TLS, and bastion or SSM access",
-      "REPLACE: Data protection — encryption at rest/in transit, secrets management",
-      "REPLACE: Supply chain — image scanning, dependency checks, and patch cadence",
+      "Edge Security: Cloudflare DNS and traffic protection, Web Application Firewall (WAF) rules, rate limiting, bot protection, and strict TLS/HTTPS encryption.",
+      "Gateway & Network Security: Nginx reverse proxy controls application exposure, internal services remain unexposed, and UFW firewall policies restrict all non-essential ports.",
+      "Host Hardening: SSH access hardening, restricted administrative permissions, Fail2ban brute-force mitigation, and minimal service footprint.",
+      "Application Security: JWT authentication, security-related HTTP headers, controlled reverse-proxy endpoints, and robust authorization controls.",
+      "Defense-in-Depth & Detection: Multi-layered defense where no single control is treated as sufficient; security events and operational logs are monitored via the observability stack.",
     ],
     diagram: {
       src: "/images/architecture/security-layers.svg",
-      alt: "Security layers diagram placeholder",
+      alt: "Multi-layered defense-in-depth security architecture diagram",
       caption:
-        "REPLACE: Caption — security zones and control placement across the stack.",
+        "Security zones: Internet → Cloudflare (WAF/DDoS) → Nginx Gateway → UFW Host Firewall → JWT/SSH Hardening → Observability.",
     },
   },
   {
     id: "backup-strategy",
     title: "Backup Strategy",
     intro:
-      "REPLACE: What is backed up, how often, where copies live, and how restores are validated.",
+      "Backups are integrated into the production operations workflow to protect application data, database data, configuration, and deployment-related information against accidental deletion, failed changes, service failures, and infrastructure incidents.",
     points: [
-      "REPLACE: Backup scope — databases, volumes, configuration, or state files",
-      "REPLACE: Schedule and retention — frequency, lifecycle, and off-site replication",
-      "REPLACE: Access controls — who can trigger restore and audit requirements",
-      "REPLACE: Validation — restore tests, checksums, or periodic drill schedule",
+      "Comprehensive Backup Scope: Covers database data, application source files, Docker Compose deployment definitions, and critical infrastructure configs.",
+      "Automated Scheduled Jobs: Scheduled backup tasks eliminate manual reliance and maintain isolated, modular backup routines for independent service restoration.",
+      "Off-Site Cloud Protection to AWS S3: Critical backup archives are encrypted and replicated off-site to AWS S3, ensuring resilience against local hardware failure.",
+      "Change Management & Recovery: Pre-deployment backups are standard protocol prior to major releases, ensuring proven rollback capabilities and recovery readiness.",
     ],
     diagram: {
       src: "/images/architecture/backup-strategy.svg",
-      alt: "Backup strategy diagram placeholder",
+      alt: "Automated local and off-site AWS S3 backup architecture diagram",
       caption:
-        "REPLACE: Caption — backup sources, targets, and retention tiers.",
+        "Backup workflow: Database & App Data / Configs → Local Scheduled Automation → Encrypted Off-Site Replication to AWS S3.",
     },
   },
   {
     id: "disaster-recovery",
     title: "Disaster Recovery",
     intro:
-      "REPLACE: Recovery objectives and failover approach for critical workloads.",
+      "Structured disaster recovery procedures designed to ensure rapid service restoration and minimal data loss across all production workloads.",
     points: [
-      "REPLACE: RTO/RPO targets — only include numbers you can substantiate",
-      "REPLACE: Failover model — active/passive, multi-region, or rebuild-from-backup",
-      "REPLACE: Runbooks — detection, decision criteria, and communication steps",
-      "REPLACE: Testing — drill frequency and last validated restore path",
+      "Recovery Objectives: Well-defined RTO and RPO targets supported by validated database dumps and configuration version control.",
+      "Off-Site Restore Readiness: Capability to rebuild and restore virtual machines and container stacks directly from AWS S3 off-site backups.",
+      "Standardized Runbooks: Step-by-step restoration playbooks for database rollbacks, container stack re-initialization, and reverse proxy reconfiguration.",
+      "Validation & Testing: Routine backup integrity verification and periodic restore drills to ensure recovery readiness during unexpected outages.",
     ],
     diagram: {
       src: "/images/architecture/disaster-recovery.svg",
-      alt: "Disaster recovery diagram placeholder",
+      alt: "Disaster recovery failover and restoration workflow diagram",
       caption:
-        "REPLACE: Caption — primary/secondary sites and failover sequence.",
+        "Disaster recovery pipeline: Incident Detection → Standby/Off-site Retrieval from S3 → Stack Rebuild & Service Verification.",
     },
   },
 ];
 
 export const technologyDecisions: TechnologyDecision[] = [
   {
-    id: "decision-iac",
-    decision: "REPLACE: Technology choice — e.g. Terraform for infrastructure provisioning",
+    id: "decision-proxmox",
+    decision: "Proxmox VE for Clustered Workload Isolation",
     context:
-      "REPLACE: Problem or constraint that drove the decision.",
+      "Needed reliable, multi-tier production hosting for applications, databases, and monitoring without resource contention or cloud compute costs.",
     rationale:
-      "REPLACE: Why this tool or pattern fit — team skills, module reuse, state management, or provider support.",
+      "Proxmox VE provides bare-metal hypervisor efficiency, robust VM isolation (Gateway, App, DB, Observability), snapshotting, and cluster management.",
     tradeoffs:
-      "REPLACE: Trade-offs accepted — learning curve, lock-in, or operational overhead.",
+      "Requires active hypervisor maintenance, host patching, and storage capacity management compared to fully managed cloud instances.",
   },
   {
-    id: "decision-cicd",
-    decision: "REPLACE: Technology choice — e.g. GitHub Actions for CI/CD",
-    context: "REPLACE: Delivery requirements and existing toolchain.",
+    id: "decision-compose",
+    decision: "Docker Compose for Service Orchestration",
+    context:
+      "Needed lightweight, declarative container management for 15+ production services with predictable startup and minimal operational overhead.",
     rationale:
-      "REPLACE: Why this pipeline model — integration, cost, self-hosted runners, or policy gates.",
-    tradeoffs: "REPLACE: Limitations or alternatives considered.",
+      "Docker Compose provides version-controlled YAML stack definitions, isolated bridge networking, and reproducible deployments without Kubernetes complexity.",
+    tradeoffs:
+      "Lacks native multi-host auto-scaling, requiring manual vertical scaling and host placement decisions.",
   },
   {
     id: "decision-observability",
-    decision: "REPLACE: Technology choice — e.g. Prometheus + Grafana",
-    context: "REPLACE: Observability gaps before adoption.",
+    decision: "Self-Hosted Prometheus, Grafana & Loki Stack",
+    context:
+      "Needed unified metrics and log visibility across virtual machines and container workloads without prohibitive SaaS observability costs.",
     rationale:
-      "REPLACE: Fit for metrics model, alerting, and team workflows.",
-    tradeoffs: "REPLACE: Storage, cardinality, or managed vs self-hosted trade-offs.",
+      "Prometheus, Grafana, and Loki offer deep telemetry correlation, powerful PromQL/LogQL querying, and full data retention control.",
+    tradeoffs:
+      "Requires monitoring and tuning TSDB storage retention, scrape intervals, and indexing performance.",
   },
 ];
 
 export const infrastructureDiagramGallery: ArchitectureDiagram[] = [
   {
     src: "/images/architecture/infrastructure-overview.svg",
-    alt: "Infrastructure overview diagram placeholder",
+    alt: "End-to-end production infrastructure overview diagram",
     caption:
-      "REPLACE: End-to-end view — user traffic through compute, data, and observability layers.",
+      "End-to-end production flow — user traffic through Cloudflare edge, Nginx gateway, containerized compute, and observability layers.",
   },
   {
     src: "/images/architecture/production-infrastructure.svg",
-    alt: "Production infrastructure reference diagram",
+    alt: "4-node Proxmox production virtualization cluster reference diagram",
     caption:
-      "REPLACE: Consolidated production layer reference — swap with your primary environment diagram.",
+      "Consolidated 4-node Proxmox cluster reference separating Gateway (VM200), Applications (VM101), Databases (VM202), and Observability (VM203).",
   },
   {
     src: "/images/architecture/network-topology.svg",
-    alt: "Network topology reference diagram",
+    alt: "Layered network topology reference diagram",
     caption:
-      "REPLACE: Consolidated network reference — swap with detailed VPC or hybrid cloud diagram.",
+      "Layered network reference — Cloudflare WAF, Nginx reverse proxy, and isolated internal bridge subnets.",
   },
 ];
