@@ -12,7 +12,7 @@ export function ProjectsPageContent() {
       <SectionHeading
         label="Case Studies"
         title="Infrastructure & DevOps Projects"
-        description="Production engineering work — architecture decisions, automation, security controls, and operational outcomes."
+        description="Production engineering work architecture decisions, automation, security controls, and operational outcomes."
         className="mb-10"
       />
       <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">

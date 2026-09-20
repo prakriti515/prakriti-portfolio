@@ -53,8 +53,8 @@ export const aboutData = {
   },
   introduction: {
     paragraphs: [
-      "I'm a Cloud & DevOps Engineer based in Kathmandu, working toward becoming a Cloud Infrastructure Architect and Platform Engineer — someone who designs and operates highly available, secure, and automated production systems, not just someone who holds certifications. Currently at Gorkha Soft Pvt. Ltd., I design and operate virtualized production infrastructure — a 4-node Proxmox environment running 15+ containerized services, backed by centralized monitoring and automated disaster recovery.",
-      "My path into infrastructure engineering wasn't a straight line — I started in agricultural science, taught secondary-level science and math, and worked as a field enumerator for Nepal's National Agriculture Census before pivoting into computer systems engineering. That background shaped how I work now: methodical, data-driven, and comfortable building systems from the ground up rather than assuming shortcuts.",
+      "I'm a Cloud & DevOps Engineer based in Kathmandu, working toward becoming a Cloud Infrastructure Architect and Platform Engineer, someone who designs and operates highly available, secure, and automated production systems, not just someone who holds certifications. Currently at Gorkha Soft Pvt. Ltd., I design and operate virtualized production infrastructure, a 5-node Proxmox environment running 15+ containerized services, backed by centralized monitoring and automated disaster recovery.",
+      "My path into infrastructure engineering wasn't a straight line; I started in agricultural science, taught secondary-level science and math, and worked as a field enumerator for Nepal's National Agriculture Census before pivoting into computer systems engineering. That background shaped how I work now: methodical, data-driven, and comfortable building systems from the ground up rather than assuming shortcuts.",
     ],
   },
   engineeringPhilosophy: {

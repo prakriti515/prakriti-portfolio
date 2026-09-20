@@ -16,16 +16,16 @@ export type HomeService = {
 
 export type HomeTech = {
   id:
-    | "aws"
-    | "azure"
-    | "linux"
-    | "docker"
-    | "k8s"
-    | "terraform"
-    | "ansible"
-    | "prometheus"
-    | "grafana"
-    | "proxmox";
+  | "aws"
+  | "azure"
+  | "linux"
+  | "docker"
+  | "k8s"
+  | "terraform"
+  | "ansible"
+  | "prometheus"
+  | "grafana"
+  | "proxmox";
   name: string;
 };
 
@@ -41,7 +41,7 @@ export const homeData = {
     subheadline:
       "I design, automate, and operate production-grade infrastructure that empowers applications to scale, stay secure, and remain highly available.",
     stats: [
-      { value: "2+", label: "Years Experience" },
+      { value: "1+", label: "Years Experience" },
       { value: "15+", label: "Docker Services in Production" },
       { value: "99.9%", label: "Uptime Focus" },
       { value: "24/7", label: "Monitoring" },
