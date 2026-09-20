@@ -59,18 +59,19 @@ export const architectureSections: ArchitectureSection[] = [
     id: "network-topology",
     title: "Network Topology",
     intro:
-      "REPLACE: How traffic enters the environment and how subnets, routing, and connectivity are structured.",
+      "The production environment uses layered network and traffic controls to separate public-facing access from internal application, database, and monitoring services. Public traffic is filtered at the edge, routed securely through a central gateway, and passed only to required internal services while keeping databases and management workloads isolated from direct public access.",
     points: [
-      "REPLACE: Edge and ingress — load balancers, DNS, CDN, or API gateway",
-      "REPLACE: Segmentation — public/private subnets, security groups, or NACLs",
-      "REPLACE: Internal connectivity — service-to-service, VPN, or peering",
-      "REPLACE: Egress controls — NAT, proxy, or restricted outbound paths",
+      "Internet & Edge Layer: Public DNS and traffic management through Cloudflare, enforcing TLS/HTTPS encryption, WAF traffic filtering, rate limiting, and bot protection.",
+      "Gateway Layer: Nginx reverse proxy routes incoming requests to appropriate application services, handles HTTPS/TLS termination, and prevents direct exposure of internal workloads.",
+      "Application Layer: Production applications run inside isolated workloads communicating through controlled internal networking, with only designated endpoints exposed via the gateway.",
+      "Database Layer: Dedicated database workloads strictly separated from public-facing services, restricting application-to-database communication exclusively to authorized services.",
+      "Monitoring & Security Layer: Prometheus metric collectors, Loki log shippers, and Grafana dashboards connected via secure internal network channels to support production operations.",
     ],
     diagram: {
       src: "/images/architecture/network-topology.svg",
-      alt: "Network topology diagram placeholder",
+      alt: "Layered network topology and traffic routing diagram",
       caption:
-        "REPLACE: Caption — VPC layout, subnets, and primary traffic flows.",
+        "Traffic flow: Internet → Cloudflare (WAF/TLS) → Gateway / Nginx Reverse Proxy → Production Apps, Databases, and Observability.",
     },
   },
   {
