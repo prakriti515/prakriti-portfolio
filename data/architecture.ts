@@ -78,18 +78,20 @@ export const architectureSections: ArchitectureSection[] = [
     id: "docker-architecture",
     title: "Docker Architecture",
     intro:
-      "REPLACE: Container runtime scope — local dev, CI builds, registry flow, and production orchestration if applicable.",
+      "Production applications and supporting services are containerized using Docker and managed primarily through Docker Compose. This provides consistent service configuration, isolated application environments, and a repeatable operational workflow for deploying and maintaining production workloads.",
     points: [
-      "REPLACE: Image build pipeline — base images, scanning, tagging, and registry",
-      "REPLACE: Runtime placement — single hosts, Swarm, ECS, or Kubernetes",
-      "REPLACE: Configuration — env vars, secrets injection, and resource limits",
-      "REPLACE: Networking and storage — bridge/overlay networks, volumes, and persistence",
+      "Docker & Isolation: Containerized application and supporting workloads ensuring consistent runtime environments, controlled dependencies, and fault isolation.",
+      "Docker Compose Orchestration: Multi-container stack definitions managing service configuration, networking, volumes, and dependency ordering for reliable deployments.",
+      "Nginx Ingress Routing: Central reverse proxy routing incoming traffic to appropriate container endpoints with TLS termination and access control.",
+      "Portainer Management: Web-based management interface providing real-time container visibility, log inspection, and operational control.",
+      "Container Networking & Storage: Isolated Docker bridge networks prevent direct external exposure, while stateful services use managed persistent volumes tied to backup routines.",
+      "Production Operational Discipline: Controlled change procedures with pre-deployment backups, dependency checks, and post-deployment telemetry validation.",
     ],
     diagram: {
       src: "/images/architecture/docker-architecture.svg",
-      alt: "Docker architecture diagram placeholder",
+      alt: "Docker multi-container deployment architecture diagram",
       caption:
-        "REPLACE: Caption — build → registry → deploy flow and runtime components.",
+        "Container workflow: Source / Build → Docker Image → Host Compose Stack (Apps, Nginx, Portainer) → Telemetry.",
     },
   },
   {
