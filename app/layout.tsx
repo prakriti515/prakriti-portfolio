@@ -14,6 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.prakritishrestha917.com.np"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: `${siteConfig.name} | ${siteConfig.title}`,
     template: `%s | ${siteConfig.name}`,
@@ -22,17 +26,28 @@ export const metadata: Metadata = {
   keywords: [
     "Cloud Engineer",
     "DevOps Engineer",
+    "Senior DevOps Engineer",
+    "Site Reliability Engineer",
+    "SRE",
+    "Infrastructure Engineer",
+    "Platform Engineer",
     "AWS",
-    "Azure",
-    "Kubernetes",
+    "Proxmox",
     "Terraform",
-    "Infrastructure as Code",
+    "Docker",
+    "Kubernetes",
+    "Prometheus",
+    "Grafana",
+    "Loki",
     "CI/CD",
   ],
-  authors: [{ name: siteConfig.name }],
+  authors: [{ name: siteConfig.name, url: "https://www.prakritishrestha917.com.np" }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "https://www.prakritishrestha917.com.np",
     title: `${siteConfig.name} | ${siteConfig.title}`,
     description: siteConfig.description,
     siteName: siteConfig.name,

@@ -1,6 +1,7 @@
 import { ExpertiseIcon } from "@/components/ui/icons";
 import { homeData } from "@/data/home";
 import type { HomeService } from "@/data/home";
+import { cn } from "@/lib/utils";
 
 const iconColorVariants: Record<string, { bg: string; border: string; text: string; glow: string }> = {
   cloud: {
@@ -41,8 +42,16 @@ function ServiceCard({ service }: { service: HomeService }) {
   return (
     <article className="group flex h-full flex-col rounded-2xl border border-white/5 bg-[#0c1020]/90 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30 hover:bg-[#10162c] hover:shadow-xl hover:shadow-indigo-500/10">
       {/* Icon Squircle */}
-      <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border transition-all duration-300 ${styling.bg} ${styling.border} ${styling.text} ${styling.glow}">
-        <div className={`${styling.text}`}>
+      <div
+        className={cn(
+          "mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border transition-all duration-300",
+          styling.bg,
+          styling.border,
+          styling.text,
+          styling.glow,
+        )}
+      >
+        <div className={styling.text}>
           <ExpertiseIcon name={service.icon} className="h-7 w-7" />
         </div>
       </div>

@@ -83,7 +83,7 @@ export function CaseStudyPageContent({ project }: CaseStudyPageContentProps) {
               )}
             </div>
 
-            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-border bg-white shadow-sm">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-border bg-card shadow-sm">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -112,7 +112,7 @@ export function CaseStudyPageContent({ project }: CaseStudyPageContentProps) {
                   <li key={item.id}>
                     <a
                       href={`#${item.id}`}
-                      className="block rounded-md px-2 py-1.5 text-sm text-text-secondary transition-colors hover:bg-white hover:text-primary"
+                      className="block rounded-md px-2 py-1.5 text-sm text-text-secondary transition-colors hover:bg-white/5 hover:text-primary"
                     >
                       {item.label}
                     </a>

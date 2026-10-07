@@ -89,21 +89,12 @@ export const aboutData = {
   },
   careerTimeline: [
     {
-      id: "timeline-entry-1",
-      period: "May 2026",
-      title: "NCE Research Grant Presentation",
-      organization: "National College of Engineering, Tribhuvan University",
-      description:
-        "Presented a multi-agent reinforcement learning framework for adaptive, fault-tolerant IoT load balancing, built on NS-3 simulations across five experimental scenarios.",
-      type: "milestone",
-    },
-    {
       id: "timeline-entry-2",
       period: "Jan 2026 – Present",
       title: "Cloud DevOps Engineer",
       organization: "Gorkha Soft Pvt. Ltd.",
       description:
-        "Design and manage a 4-node Proxmox virtualization environment supporting 15+ Docker containers, centralized monitoring (Prometheus, Grafana, Loki, Alertmanager), automated backup/DR to AWS S3, and security hardening via Cloudflare WAF, UFW, and Fail2ban.",
+        "Design and manage a 5-node Proxmox virtualization environment supporting 15+ Docker containers, centralized monitoring (Prometheus, Grafana, Loki, Alertmanager), automated backup/DR to AWS S3, and security hardening via Cloudflare WAF, UFW, and Fail2ban.",
       type: "work",
     },
     {
@@ -129,13 +120,13 @@ export const aboutData = {
       period: "2022 – 2025",
       title: "BSc (Hons) Computer Systems Engineering",
       organization: "University of Sunderland / ISMT College",
-      description:
-        "Graduated with a 2:1, alongside a funded research project applying multi-agent reinforcement learning to IoT network load balancing.",
+      // description:
+      // "Graduated with a 2:1, alongside a funded research project applying multi-agent reinforcement learning to IoT network load balancing.",
       type: "education",
     },
     {
       id: "timeline-entry-6",
-      period: "Jan 2024",
+      period: "Jan 2024 - Jan 2025",
       title: "DevOps Engineer",
       organization: "IronRim, LLC",
       description:

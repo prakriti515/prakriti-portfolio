@@ -21,7 +21,7 @@ export function ProjectPager({ previous, next }: ProjectPagerProps) {
       {previous ? (
         <Link
           href={getProjectUrl(previous.id)}
-          className="group rounded-xl border border-border bg-white p-5 transition-colors hover:border-primary/25 hover:bg-card"
+          className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/25 hover:bg-[#10152a]"
         >
           <p className="text-xs font-semibold uppercase tracking-wider text-text-secondary">
             Previous
@@ -37,7 +37,7 @@ export function ProjectPager({ previous, next }: ProjectPagerProps) {
       {next ? (
         <Link
           href={getProjectUrl(next.id)}
-          className="group rounded-xl border border-border bg-white p-5 text-right transition-colors hover:border-primary/25 hover:bg-card sm:col-start-2"
+          className="group rounded-xl border border-border bg-card p-5 text-right transition-colors hover:border-primary/25 hover:bg-[#10152a] sm:col-start-2"
         >
           <p className="text-xs font-semibold uppercase tracking-wider text-text-secondary">
             Next
