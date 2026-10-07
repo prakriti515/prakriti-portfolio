@@ -16,7 +16,7 @@ export function ArticleCard({ article, className }: ArticleCardProps) {
   return (
     <article
       className={cn(
-        "group flex flex-col rounded-xl border border-border bg-white p-6 transition-all duration-300 hover:border-primary/25 hover:shadow-md hover:shadow-primary/5",
+        "group flex flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/25 hover:shadow-md hover:shadow-primary/5",
         className,
       )}
     >

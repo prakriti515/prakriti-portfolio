@@ -19,7 +19,7 @@ export function CaseStudyGallery({ items }: CaseStudyGalleryProps) {
         {items.map((item) => (
           <figure
             key={item.id}
-            className="overflow-hidden rounded-xl border border-border bg-white"
+            className="overflow-hidden rounded-xl border border-border bg-card"
           >
             <div className="relative aspect-video w-full bg-card">
               <Image

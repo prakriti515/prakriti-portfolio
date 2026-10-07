@@ -20,7 +20,7 @@ export function TechnologyDecisionsSection({
         {decisions.map((item) => (
           <article
             key={item.id}
-            className="flex flex-col rounded-xl border border-border bg-white p-6"
+            className="flex flex-col rounded-xl border border-border bg-card p-6"
           >
             <h3 className="font-semibold text-text-primary">{item.decision}</h3>
             <div className="mt-4 space-y-4 text-sm leading-relaxed">

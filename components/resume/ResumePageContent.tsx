@@ -59,17 +59,13 @@ export function ResumePageContent() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button href={siteConfig.resumeUrl} size="md" external>
-              <DownloadIcon />
-              Download PDF
-            </Button>
             <PrintButton />
           </div>
         </div>
       </div>
 
       <ContentSection containerClassName="max-w-4xl">
-        <article className="resume-document space-y-8 rounded-xl border border-border bg-white p-6 sm:p-10">
+        <article className="resume-document space-y-8 rounded-xl border border-border bg-card p-6 sm:p-10 print:bg-white print:border-none print:p-0">
           <header className="resume-header border-b border-border pb-6">
             <h1 className="hidden print:block text-2xl font-bold text-text-primary">
               {siteConfig.name}

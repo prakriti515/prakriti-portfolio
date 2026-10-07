@@ -21,7 +21,7 @@ const SUPPORTED_LANGS = [
 export async function getHighlighter(): Promise<Highlighter> {
   if (!highlighterPromise) {
     highlighterPromise = createHighlighter({
-      themes: ["github-light"],
+      themes: ["github-dark"],
       langs: [...SUPPORTED_LANGS],
     });
   }
@@ -39,6 +39,6 @@ export async function highlightCode(
 
   return highlighter.codeToHtml(code, {
     lang,
-    theme: "github-light",
+    theme: "github-dark",
   });
 }

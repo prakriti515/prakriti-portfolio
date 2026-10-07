@@ -62,7 +62,7 @@ export function AboutPageContent() {
           {engineeringPhilosophy.principles.map((principle) => (
             <article
               key={principle.id}
-              className="rounded-xl border border-border bg-white p-6"
+              className="rounded-xl border border-border bg-card p-6"
             >
               <h3 className="text-base font-semibold text-text-primary">
                 {principle.title}
@@ -85,7 +85,7 @@ export function AboutPageContent() {
           {currentRole.responsibilities.map((item) => (
             <li
               key={item}
-              className="flex items-start gap-3 rounded-xl border border-border bg-white p-4"
+              className="flex items-start gap-3 rounded-xl border border-border bg-card p-4"
             >
               <span
                 className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
@@ -109,10 +109,10 @@ export function AboutPageContent() {
           {careerTimeline.map((entry) => (
             <li key={entry.id} className="relative">
               <span
-                className="absolute -left-[2.375rem] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-primary bg-white"
+                className="absolute -left-[2.375rem] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-primary bg-background"
                 aria-hidden="true"
               />
-              <div className="rounded-xl border border-border bg-white p-5">
+              <div className="rounded-xl border border-border bg-card p-5">
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge variant="primary">
                     {timelineTypeLabels[entry.type]}
@@ -146,7 +146,7 @@ export function AboutPageContent() {
           {coreTechnologies.categories.map((category) => (
             <article
               key={category.id}
-              className="rounded-xl border border-border bg-white p-6"
+              className="rounded-xl border border-border bg-card p-6"
             >
               <h3 className="font-semibold text-text-primary">
                 {category.name}
@@ -171,7 +171,7 @@ export function AboutPageContent() {
           {learningRoadmap.items.map((item) => (
             <article
               key={item.id}
-              className="rounded-xl border border-border bg-white p-6"
+              className="rounded-xl border border-border bg-card p-6"
             >
               <Badge
                 variant={
@@ -201,7 +201,7 @@ export function AboutPageContent() {
           {careerGoals.goals.map((goal, index) => (
             <li
               key={goal}
-              className="flex items-start gap-4 rounded-xl border border-border bg-white p-5"
+              className="flex items-start gap-4 rounded-xl border border-border bg-card p-5"
             >
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary">
                 {String(index + 1).padStart(2, "0")}
@@ -224,7 +224,7 @@ export function AboutPageContent() {
           {frequentlyUsedTools.map((group) => (
             <article
               key={group.id}
-              className="rounded-xl border border-border bg-white p-6"
+              className="rounded-xl border border-border bg-card p-6"
             >
               <h3 className="font-semibold text-text-primary">
                 {group.category}
@@ -244,24 +244,22 @@ export function AboutPageContent() {
       <ContentSection id="resume-cta">
         <div
           className={cn(
-            "rounded-2xl border border-border bg-white p-8 text-center sm:p-12",
-            "bg-gradient-to-br from-primary/5 via-white to-secondary/5",
+            "rounded-2xl border border-white/10 bg-[#0c1020]/90 p-8 text-center sm:p-12 shadow-xl",
+            "bg-gradient-to-br from-indigo-500/10 via-[#0c1020] to-blue-500/10",
           )}
         >
-          <h2 className="text-2xl font-bold text-text-primary sm:text-3xl">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">
             View Full Resume
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-text-secondary">
-            Download a PDF copy or review the full online resume with experience,
-            skills, and credentials.
+          <p className="mx-auto mt-3 max-w-xl text-slate-400">
+            Explore verified experience, production responsibilities, skill matrix, and credentials.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button href={siteConfig.resumeUrl} size="lg" external>
-              <DownloadIcon />
-              Download Resume
+            <Button href="/resume" variant="gradient" size="lg">
+              View Online Resume
             </Button>
-            <Button href="/resume" variant="outline" size="lg">
-              Online Resume
+            <Button href="/contact" variant="outline" size="lg">
+              Get in Touch
             </Button>
           </div>
         </div>

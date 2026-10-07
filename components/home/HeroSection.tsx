@@ -61,14 +61,12 @@ export function HeroSection() {
                 <ArrowRightIcon />
               </Button>
               <Button
-                href={siteConfig.resumeUrl}
+                href="/resume"
                 variant="outline"
                 size="lg"
-                external
                 className="rounded-xl border-white/10 bg-[#0d1222]/80 px-6 py-3 font-semibold text-white backdrop-blur-md hover:border-indigo-500/40 hover:bg-[#131930] hover:scale-[1.02]"
               >
-                <DownloadIcon />
-                Download Resume
+                View Resume
               </Button>
             </div>
 
