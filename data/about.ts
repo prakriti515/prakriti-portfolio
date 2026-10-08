@@ -120,8 +120,8 @@ export const aboutData = {
       period: "2022 – 2025",
       title: "BSc (Hons) Computer Systems Engineering",
       organization: "University of Sunderland / ISMT College",
-      // description:
-      // "Graduated with a 2:1, alongside a funded research project applying multi-agent reinforcement learning to IoT network load balancing.",
+      description:
+        "Graduated",
       type: "education",
     },
     {
