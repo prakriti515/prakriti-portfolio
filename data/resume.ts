@@ -101,7 +101,7 @@ export const resumeData = {
       title: "DevOps Engineer",
       company: "IronRim, LLC",
       location: "Columbus, OH (Remote)",
-      period: "Jan 2024",
+      period: "Jan 2024 - Jan 2025",
       responsibilities: [
         "Built and optimized CI/CD pipelines using Jenkins and GitHub Actions to automate build, test, and deployment workflows.",
         "Assisted in optimizing development environments and improving deployment reliability through automation.",
