@@ -9,7 +9,7 @@
 export const siteConfig = {
   name: "Prakriti Shrestha",
   title: "Cloud & DevOps Engineer", // e.g. Platform Engineer | SRE | DevSecOps Engineer
-  email: "prakritishrestha515@gmail.com",
+  email: "contact@prakritishrestha917.com.np",
   location: "Koteshwor, Kathmandu",
   resumeUrl: "/resume.pdf", // add public/resume.pdf
   profileImage: "/images/profilephoto.png",
@@ -32,7 +32,7 @@ export const siteConfig = {
     ],
     stats: [
       {
-        value: "1+",
+        value: "2+",
         label: "Years in Infrastructure / DevOps",
       },
       {
